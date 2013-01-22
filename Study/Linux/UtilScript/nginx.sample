@@ -1,0 +1,8 @@
+server {
+    listen       80;
+    server_name  {domain};
+    index index.php;
+    root /opt/website/{domain};
+    include /etc/nginx/virtual_host_share.conf;
+}
+

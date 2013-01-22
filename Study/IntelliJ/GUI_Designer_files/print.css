@@ -1,0 +1,369 @@
+html body {
+  font-family: trebuchet ms, verdana, tahoma, arial;
+  font-size: 80%;
+  margin: .25in;
+  padding: 0;
+  margin: 0;
+  }
+
+a:link, a:visited {color: #0063D5; font-family: trebuchet ms, verdana;}
+.acc {color: #C16C33;}
+
+#container {margin: 0; position: relative;}
+
+/* ----------------| logo |------------------------------------------------------------------ */
+
+#logo {display: none;}
+
+/* ----------------| top navigation |------------------------------------------------------- */
+
+#top {display: none;}
+
+/* ----------------| main navigation |-------------------------------------------------------- */
+
+#navcontainer{display: none;}
+/* #product {display: none;} */
+#product span {display: none;}
+#nav {display: none;}
+#bc{display: none;}
+#homebanner {padding: 0;}
+
+/* ------------------| sub-navigation |--------------------------------------------------- */
+
+#subnavmain, #subnavidea, #subnavomea, #subnavresharper {display: none;}
+
+/* ------------------| context nav |------------------------------------------------ */
+
+#subcontent {display:none;}
+
+/* ------------------| banner |----------------------------------------------------- */
+
+#bannermain h2 {color: #4E7AC8; font-size: 200%; font-weight: normal; margin-top:0;}
+#banneridea h2 {color: #2947AC; font-size: 200%; font-weight: normal; margin-top:0;}
+#bannerfabrique h2 {color: #7FB74E; font-size: 200%; font-weight: normal; margin-top:0;}
+#banneromea h2 {color: #7166A7; font-size: 200%; font-weight: normal; margin-top:0;}
+#banneromeareader h2 {color: #7166A7; font-size: 200%; font-weight: normal; margin-top:0;}
+#bannerre h2 {color: #631143; font-size: 200%; font-weight: normal; margin-top:0;}
+/* ----------------- home ------------------------------------------------------------ */
+
+#homecontainer {padding: 0; margin: 0;}
+#homebanner {float: left; width: 282px;}
+
+#homeawards {width: 270px; float: left;}
+
+#homenav li {display: inline; list-style-type: none;}
+
+#homenav li a:link, #homenav li a:visited, #homenav li a:hover {
+    width: 120px;
+    float: left;
+    text-decoration: none;
+    }
+
+h2.home {font-size: 150%; color: #0063D5; }
+
+#homeshortcuts{float: left; width: 120px;}
+#homeshortcuts p.more{padding-left: 15px;}
+#homenews {float: right; padding-left: 10px; width: 220px;}
+#homenews p{padding-bottom: 0.8em;}
+
+.homelist li {padding-bottom: 20px;}
+
+#homeawards h3, #homenews h3, #homeshortcuts h3 {
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    }
+
+#homeaward1 {
+	margin: 0;
+	width: 25%;
+	float: right;
+    }
+
+#homeaward3 {
+	margin: 0;
+	width: 25%;
+	float: left;
+    }
+
+#homeaward2 {
+    margin-top: 0px;
+	margin-right: 34%;
+	margin-left: 34%;
+	width: 25%;
+    }
+
+#homeaward1, #homeaward2, #homeaward3 {
+    font-family: verdana, arial;
+	font-size: 80%;
+	line-height: 1.2em;
+    }
+
+#homeshortcuts h5 {
+    margin-bottom: 0.6em;
+    }
+
+
+
+/* -----------------| content |------------------------------------------------------- */
+
+product #firstcol {width: 66%;	float: left;}
+#product #secondcol {width: 32%; float: right;line-height: 1.7em;}
+
+/* features ------------------------------------------------------ */
+.feature {margin-bottom: 1em;}
+.feature h3 {font-family: trebuchet ms, tahoma; font-size: 120%; font-weight: bold; border-bottom: 1px solid #ccc;}
+.feature img {border: 1px solid #555;}
+.enlarge {float: left; margin: 0px 25px 15px 0px;}
+.enlargeright {margin: 0px 0 0px 20px;}
+.ideatext {padding-left: 320px;}
+.feature img.screenshot {float: left; margin: 5px 25px 15px 0px;}
+.feature img.noborder {border: 1px solid #fff;}
+p.opennewwin {display: none;}
+.feature li.screenshot {list-style-type:none;}
+
+/* second pages intro text block layout --------------------------- */
+#desc p {margin-bottom: 1.5em;}
+#intro {margin-bottom: 1.5em;}
+#intro img {float: left; padding: 0 20px 10px 0;}
+
+/* 3-column layout ------------------------------------------------- */
+
+.maincol1 {
+	position: absolute;
+    left: 0;
+    width: 25%;
+    }
+.maincol3 {
+	position: absolute;
+    left: 70%;
+    width: 25%;
+    }
+.maincol2 {
+	margin: 0px 40% 0 35%;
+    padding: 0px;
+    }
+
+.column1 {
+	position: absolute;
+    left: 0;
+    width: 45%;
+    }
+
+.column3 {
+	position: absolute;
+    left: 75%;
+    width: 20%;
+    }
+
+.column2 {
+    margin: 0px 20% 0 50%;
+    padding: 0px;
+    }
+
+/* 2-column layout ------------------------------------------------- */
+#firstcol {width: 46%; float: left;}
+#secondcol {width: 46%;	float: right;}
+
+/* products -------------------------------------------------------- */
+
+#ideaproduct .firstcol {width: 20%;	float: left;}
+#ideaproduct .secondcol {width: 78%; float: right;}
+#ideaproduct .firstcol img {margin-bottom: 6em;}
+#fabrpic img {margin: 20px;}
+#structure {padding-left: 20px;}
+#fabr #firstcol {float: left; width: 50%; padding-top: 20px; }
+#fabr #secondcol {line-height: 1.7em; float: right; width: 47%; padding-top: 3em;}
+
+#product #firstcol {width: 66%;	float: left;}
+#product #secondcol {width: 32%; float: right; line-height: 1.7em;}
+ul .col1, ul .col2 {clear: both; padding-left: 5px; list-style: square;}
+
+
+
+/* download -------------------------------------------------------- */
+#price {font-weight: bold; font-size: 160%;  margin-bottom: 2em;}
+#price img {float: right; margin-right: 30px;}
+
+/* developers about ------------------------------------------------ */
+.devtitle {font-size: 110%; font-weight: bold;}
+.develop p.author {text-align: left;}
+
+/* recommends ------------------------------------------------------- */
+.allrec {display: none;}
+.recommend p {margin-left: 120px;}
+.recommend p.tit {font-weight: bold;}
+.recommend img {float: left;}
+
+/* customer list ----------------------------------------------------- */
+#col100 {width: 40%; float: left; font-size: 110%;}
+#col500 {width: 40%; float: right; font-size: 110%;}
+#col100 h3 {border-bottom: 1px solid #E35204;}
+#col500 h3 {border-bottom: 1px solid #F8AA01;}
+#customers h3 {border-bottom: 1px solid #ccc;}
+
+/* testimonials ----------------------------------------------------- */
+.testimonial, .testimonialnoline {border-bottom: 1px solid #ccc;}
+.testimonial p {margin-right: 160px;}
+.testimonial img {float: right;}
+
+/* system requirements ----------------------------------------------- */
+#req p.dotted {font-size: 110%; font-weight: bold;}
+
+/* sales FAQ --------------------------------------------------------- */
+.faq {padding-bottom: 10px;}
+#faqcontainer p {padding-left: 35px;}
+#faqcontainer p.ask {padding-left: 0px; font-weight: bold;}
+#faqcontainer li {margin-left: 35px;}
+/* buy --------------------------------------------------------------- */
+
+.buylist li {font-size: 110%;}
+#introtext {padding-left: 150px;}
+
+/* resellers ---------------------------------------------------------- */
+
+.hidden {display: none;}
+.visible {display: inline; width: 260px;}
+
+.resellersheaderdiv{
+    height: 26px;
+    width: 260px;
+    font-weight: bold;
+    border-top: 1px solid #DFDFDF;
+}
+
+.resellersheaderdivact{
+    width: 260px;
+    height: 26px;
+    font-weight: bold;
+}
+
+.disable, .resactive {font-size: 110%;}
+.resinfo, .resinfolast {font-size: 86%;}
+p.compname {font-weight: bold; font-size: 130%;}
+p.rescity {font-weight: bold;}
+
+/* news -------------------------------------------------------------- */
+.newsitem p {margin-left: 140px;}
+.newsitem img {float: left;}
+.date {font-weight: bold;}
+
+/* press releases ---------------------------------------------------- */
+.press p {margin-left: 140px;}
+.press .date {float: left;}
+
+/* awards ------------------------------------------------------------ */
+.award {border-bottom: 1px solid #ccc;}
+.award p, .awardnoline p {margin-left: 200px;}
+.award img, .awardnoline img {float: left;}
+
+/* execs ------------------------------------------------------------ */
+#execs img {float: left;}
+.execstext {padding-left: 105px;}
+
+/* team ------------------------------------------------------------ */
+#teamindex li {font-size: 86%; display: inline; list-style-type: none;}
+.question { font-size: 86%;}
+.answer {font-size: 110%; padding-bottom: 2.5em;}
+#teampic {float: right;}
+#teampic img {margin-left: 30px;}
+#teampic h3 {margin-left: 30px;}
+
+
+/* -------------------------- footer -------------------------------- */
+#fcontainer{font-size: 70%; border-top: 1px #999 solid; margin-top: 3em; font-family: verdana, arial; color: #999;}
+#copy {float: left; width: 60%;}
+#mail {float: right;}
+
+/* forms ------------------------------------------------------------- */
+#block {
+    font-weight: bold;
+    font-size: 80%;
+    width: 90%;
+    padding: 20px;
+    }
+.downloads{
+    display:none;
+}
+/* ------ headers -------------------------------------------------------- */
+h1 {width: 100%; font-size: 160%; border-bottom: 1px solid #777;}
+
+h2 {font-size: 150%;}
+
+h3 {font-size: 120%;}
+
+h4 {font-size: 115%;}
+
+h5 {font-size: 110%; margin-bottom: 0.3em;}
+
+/* underlined headers ------------------------------------------------ */
+#faqcontainer h3 {
+    text-decoration: underline;
+    font-size: 110%;
+}
+#training h3, #documents h3, #req h3, #faqcontainer h2, #contacts h3, .recommend h3, h3.underline, h3.buytitle, h3.cont {
+    border-bottom: 2px solid #000;
+    }
+
+hr {
+    border-top: 1px dashed #ccc;
+	color: #fff;
+	background-color: #fff;
+	height: 1px;
+	}
+
+img {border: 0;}
+img.cover {float: left; padding: 15px 5px 5px 0px;}
+
+br.clr {clear: left;}
+.clear {clear: left; margin: 0; padding: 0;}
+.hide {display: none;}
+
+.author {color: #999; font-size: 86%;}
+p.author {text-align: right;}
+p.more {font-family: trebuchet ms, verdana; font-size: 95%;}
+p.top {display: none;}
+p.comment {font-size: 90%;}
+
+/*-- full printable table --*/
+table.fullprintable td, table.fullprintable th{
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+
+}
+table.fullprintable td.feature{
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+table.fullprintable td span{
+    display:inline;
+}
+/*-- full printable table end --*/
+pre{
+    margin-left: 40px;
+}
+/*-- external links --*/
+a.external {
+    background: none;
+    padding-right: 0;
+}
+/*-- external links end --*/
+/*-- code style --*/
+code{
+    font-size: 130%;
+}
+pre{
+    font-size: 115%;
+}
+/*-- nonprintabe stuff --*/
+#header ul{
+    display: none;
+    
+}
+#footer{
+    display:none;
+}
+
+

@@ -1,0 +1,1 @@
+!/bin/rm# a script who delete itself# when you run this script, nothing happened but itself disappeardWHATEVER=65echo "This line will never print!"exit $WHATEVER

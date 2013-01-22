@@ -1,0 +1,12 @@
+#每行6列，每列的含义参照命令行1的解释
+/dev/LogVol1		/		ext3		defaults		1		1		
+/dev/LogVol4		/var		ext3		defaults		1		2
+/dev/LogVol5		/usr		ext3		defaults		1		2
+/dev/LogVol2		/tmp		ext3		defaults		1		2
+LABEL=/boot		/boot		ext3		defaults		1		2
+tmpfs		/dev/shm		tmpfs		defaults		0		0
+devpts		/dev/pts		devpts		gid=5,mode=620		0		0
+sysfs		/sys		sysfs		defaults		0		0
+proc		/proc		proc		defaults		0		0
+/dev/LogVol0		swap		swap		defaults		0		0
+/dev/LogVolHome		/home		ext3		defaults		1		2

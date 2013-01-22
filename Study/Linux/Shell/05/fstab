@@ -1,0 +1,12 @@
+/dev/VolGroup_ID_19679/LogVol1 / ext3 defaults 1 1
+/dev/VolGroup_ID_19679/LogVol4 /var ext3 defaults 1 2
+/dev/VolGroup_ID_19679/LogVol5 /usr ext3 defaults 1 2
+/dev/VolGroup_ID_19679/LogVol2 /tmp ext3 defaults 1 2
+LABEL=/boot /boot ext3 defaults 1 2
+tmpfs /dev/shm tmpfs defaults 0 0
+devpts /dev/pts devpts gid=5,mode=620 0 0
+sysfs /sys sysfs defaults 0 0
+proc /proc proc defaults 0 0
+/dev/VolGroup_ID_19679/LogVol0 swap swap defaults 0 0
+/dev/VolGroup_ID_19679/LogVolHome /home ext3 defaults 1 2
+
