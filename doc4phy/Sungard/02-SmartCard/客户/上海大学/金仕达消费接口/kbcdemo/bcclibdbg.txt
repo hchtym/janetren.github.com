@@ -1,0 +1,846 @@
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=
+sstatus1(:2)=0
+sstatus2(:2)=
+sstatus3(:2)=
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=
+sstatus1(:2)=0
+sstatus2(:2)=
+sstatus3(:2)=
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=
+sstatus1(:2)=0
+sstatus2(:2)=
+sstatus3(:2)=
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=
+sstatus1(:2)=0
+sstatus2(:2)=
+sstatus3(:2)=
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=0
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=0
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=0
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=0
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=y
+sstatus3(:2)=w
+sserial1(:13)=01
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sstatus1(:2)=0
+sstatus2(:2)=w
+sstatus3(:2)=y
+sserial1(:13)=01
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=
+lvol0(:4)=1
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=
+lvol0(:4)=5
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=851002
+	firstflag=1
+	nextflag=0
+	hook.queuetype=5002
+	hook.hostname+1=1000
+	recCount=1
+	retCode=0
+
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=yan
+sserial4(:13)=wang
+END OF PACK
+
+scust_no(:11)=0001
+sholder_ac_no(:16)=0002
+sserial1(:13)=01
+sserial2(:13)=00
+sserial3(:13)=wang
+sserial4(:13)=yan
+END OF PACK
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+
+sholder_ac_no(:16)=wang
+END OF PACK
+
+scust_no(:11)=
+scust_no2(:11)=
+sholder_type(:3)=
+lvol0(:4)=5
+lvol6(:4)=0
+damt32(:8)=0.000000
+END OF PACK
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=7102
+	hook.hostname+1=6000
+	recCount=1
+	retCode=0
+

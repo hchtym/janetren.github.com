@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://dam.imc.h3c.com/damAssetService" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax23="http://ws.common.imc.h3c.com/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax21="http://asset.damws.imc.h3c.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dam.imc.h3c.com/damAssetService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ax25="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://asset.damws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="AddAssetInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="assetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerVariety" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="physicalPos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serialVersionUID" type="xs:long" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ModifyAssetInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assetId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="assetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="assetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerVariety" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="physicalPos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serialVersionUID" type="xs:long" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAssetDetailInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax25:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="assetName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="assetNumber" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="computerType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="computerVariety" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="groupName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="physicalPos" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="responserId" type="xs:long" />
+              <xs:element minOccurs="0" name="responserName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAssetGroupInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax25:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAssetGroupInfoList" nillable="true" type="ax21:RetAssetGroupInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAssetGroupInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="groupDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="groupName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AssetQueryInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="assetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerVariety" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="operSystem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operSystemId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="operSystemMend" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAssetInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax25:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAssetList" nillable="true" type="ax21:RetAssetInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAssetInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assetId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="assetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="assetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="joinDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="responser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax22="http://asset.damws.imc.h3c.com/xsd" xmlns:ax24="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dam.imc.h3c.com/damAssetService">
+      <xs:import namespace="http://asset.damws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:element name="addAsset">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax22:AddAssetInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addAssetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteAsset">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteAssetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAsset">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax22:ModifyAssetInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAssetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAssetDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAssetDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:RetAssetDetailInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAssetGroupResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:RetAssetGroupInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAsset">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax22:AssetQueryInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAssetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:RetAssetInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.common.imc.h3c.com/xsd">
+      <xs:complexType name="WSCommonResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorCode" type="xs:int" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addAssetRequest">
+    <wsdl:part name="parameters" element="ns:addAsset" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetDetailRequest">
+    <wsdl:part name="parameters" element="ns:queryAssetDetail" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetResponse">
+    <wsdl:part name="parameters" element="ns:queryAssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyAssetRequest">
+    <wsdl:part name="parameters" element="ns:modifyAsset" />
+  </wsdl:message>
+  <wsdl:message name="modifyAssetResponse">
+    <wsdl:part name="parameters" element="ns:modifyAssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetGroupRequest" />
+  <wsdl:message name="addAssetResponse">
+    <wsdl:part name="parameters" element="ns:addAssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetDetailResponse">
+    <wsdl:part name="parameters" element="ns:queryAssetDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAssetRequest">
+    <wsdl:part name="parameters" element="ns:deleteAsset" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetGroupResponse">
+    <wsdl:part name="parameters" element="ns:queryAssetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAssetRequest">
+    <wsdl:part name="parameters" element="ns:queryAsset" />
+  </wsdl:message>
+  <wsdl:message name="deleteAssetResponse">
+    <wsdl:part name="parameters" element="ns:deleteAssetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="damAssetServicePortType">
+    <wsdl:operation name="queryAssetGroup">
+      <wsdl:input wsaw:Action="urn:queryAssetGroup" message="ns:queryAssetGroupRequest" />
+      <wsdl:output wsaw:Action="urn:queryAssetGroupResponse" message="ns:queryAssetGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addAsset">
+      <wsdl:input wsaw:Action="urn:addAsset" message="ns:addAssetRequest" />
+      <wsdl:output wsaw:Action="urn:addAssetResponse" message="ns:addAssetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetail">
+      <wsdl:input wsaw:Action="urn:queryAssetDetail" message="ns:queryAssetDetailRequest" />
+      <wsdl:output wsaw:Action="urn:queryAssetDetailResponse" message="ns:queryAssetDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAsset">
+      <wsdl:input wsaw:Action="urn:queryAsset" message="ns:queryAssetRequest" />
+      <wsdl:output wsaw:Action="urn:queryAssetResponse" message="ns:queryAssetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyAsset">
+      <wsdl:input wsaw:Action="urn:modifyAsset" message="ns:modifyAssetRequest" />
+      <wsdl:output wsaw:Action="urn:modifyAssetResponse" message="ns:modifyAssetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsset">
+      <wsdl:input wsaw:Action="urn:deleteAsset" message="ns:deleteAssetRequest" />
+      <wsdl:output wsaw:Action="urn:deleteAssetResponse" message="ns:deleteAssetResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="damAssetServiceHttpBinding" type="ns:damAssetServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="queryAssetGroup">
+      <http:operation location="damAssetService/queryAssetGroup" />
+      <wsdl:input>
+        <mime:content part="queryAssetGroup" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAssetGroup" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAsset">
+      <http:operation location="damAssetService/addAsset" />
+      <wsdl:input>
+        <mime:content part="addAsset" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addAsset" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetail">
+      <http:operation location="damAssetService/queryAssetDetail" />
+      <wsdl:input>
+        <mime:content part="queryAssetDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAssetDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAsset">
+      <http:operation location="damAssetService/queryAsset" />
+      <wsdl:input>
+        <mime:content part="queryAsset" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAsset" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAsset">
+      <http:operation location="damAssetService/modifyAsset" />
+      <wsdl:input>
+        <mime:content part="modifyAsset" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="modifyAsset" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsset">
+      <http:operation location="damAssetService/deleteAsset" />
+      <wsdl:input>
+        <mime:content part="deleteAsset" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="deleteAsset" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="damAssetServiceSoap12Binding" type="ns:damAssetServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryAssetGroup">
+      <soap12:operation soapAction="urn:queryAssetGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAsset">
+      <soap12:operation soapAction="urn:addAsset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetail">
+      <soap12:operation soapAction="urn:queryAssetDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAsset">
+      <soap12:operation soapAction="urn:queryAsset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAsset">
+      <soap12:operation soapAction="urn:modifyAsset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsset">
+      <soap12:operation soapAction="urn:deleteAsset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="damAssetServiceSoap11Binding" type="ns:damAssetServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryAssetGroup">
+      <soap:operation soapAction="urn:queryAssetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAsset">
+      <soap:operation soapAction="urn:addAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetail">
+      <soap:operation soapAction="urn:queryAssetDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAsset">
+      <soap:operation soapAction="urn:queryAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAsset">
+      <soap:operation soapAction="urn:modifyAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsset">
+      <soap:operation soapAction="urn:deleteAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="damAssetService">
+    <wsdl:port name="damAssetServiceHttpSoap11Endpoint" binding="ns:damAssetServiceSoap11Binding">
+      <soap:address location="http://192.168.64.1:8080/imcws/services/damAssetService/" />
+    </wsdl:port>
+    <wsdl:port name="damAssetServiceHttpEndpoint" binding="ns:damAssetServiceHttpBinding">
+      <http:address location="http://192.168.64.1:8080/imcws/services/damAssetService/" />
+    </wsdl:port>
+    <wsdl:port name="damAssetServiceHttpSoap12Endpoint" binding="ns:damAssetServiceSoap12Binding">
+      <soap12:address location="http://192.168.64.1:8080/imcws/services/damAssetService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

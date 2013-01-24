@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ax28="http://ws.common.imc.h3c.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax24="http://entity.plat.imc.h3c.com/xsd" xmlns:ns="http://imc.h3c.com/imcplatUserService" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax22="http://util.java/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax21="http://entity.usr.imc.h3c.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://imc.h3c.com/imcplatUserService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://util.java/xsd">
+      <xs:complexType name="Map">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="empty" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Set">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="empty" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax26="http://entity.plat.imc.h3c.com/xsd" xmlns:ax23="http://util.java/xsd" xmlns:ax212="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://entity.usr.imc.h3c.com/xsd">
+      <xs:import namespace="http://util.java/xsd" />
+      <xs:import namespace="http://entity.plat.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoColumn9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="appendInfoId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="certification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="extendInfo" nillable="true" type="ax23:Map" />
+          <xs:element minOccurs="0" name="extendShowFlags" nillable="true" type="ax23:Map" />
+          <xs:element minOccurs="0" name="groupDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="groupName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="optResult" type="xs:boolean" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resultStr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="selected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="status" type="xs:int" />
+          <xs:element minOccurs="0" name="strUserCreateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="urlPara" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userAppend" nillable="true" type="ax21:UserAppendInfo" />
+          <xs:element minOccurs="0" name="userCancelTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userCreateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userGroup" nillable="true" type="ax26:UserGroup" />
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UserAppendInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="column_01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_04" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_05" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_06" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_07" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_08" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_09" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="column_20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="user" nillable="true" type="ax21:User" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSUser">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax212:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="user" nillable="true" type="ax21:User" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="WSUserAppendArray">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax212:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="userAppendArray" nillable="true" type="ax21:UserAppendDefine" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="UserAppendDefine">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="canModify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="columnId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="defaultValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fieldLen" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="fieldMax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fieldMin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fieldType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="options" nillable="true" type="ax23:Set" />
+          <xs:element minOccurs="0" name="priority" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="required" type="xs:boolean" />
+          <xs:element minOccurs="0" name="showForPreRegisterUser" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="userAppendOptionsArray" nillable="true" type="ax21:UserAppendOptions" />
+          <xs:element minOccurs="0" name="valueStr" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UserAppendOptions">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appendDef" nillable="true" type="ax21:UserAppendDefine" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="optionsValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSUserArray">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax212:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="userArray" nillable="true" type="ax21:User" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="WSUserGroup">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax212:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="userGroup" nillable="true" type="ax26:UserGroup" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax25="http://util.java/xsd" xmlns:ax210="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://entity.plat.imc.h3c.com/xsd">
+      <xs:import namespace="http://util.java/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="UserGroup">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="detailPageUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="elementNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="extendInfo" nillable="true" type="ax25:Map" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="operatorArray" nillable="true" type="ax24:Operator" />
+          <xs:element minOccurs="0" name="operators" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="selected" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Operator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customViews" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="defaultAcl" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="defaultManagedDefinedView" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="defaultManagedGroup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="devGroups" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="domainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="failCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="favourites" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="individualInfo" nillable="true" type="ax25:Map" />
+          <xs:element minOccurs="0" name="lastLoginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="lastPasswordChangeTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="managedAllDefinedViews" type="xs:boolean" />
+          <xs:element minOccurs="0" name="managedAllGroups" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operatorAcls" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="role" nillable="true" type="ax24:Role" />
+          <xs:element minOccurs="0" name="roleDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="selected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="shortcutModuleId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="urlPara" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userGroups" nillable="true" type="ax25:Set" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Role">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="roleOperates" nillable="true" type="ax25:Set" />
+          <xs:element minOccurs="0" name="roleResources" nillable="true" type="ax25:Set" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSUserGroupArray">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax210:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="userGroupArray" nillable="true" type="ax24:UserGroup" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax27="http://entity.usr.imc.h3c.com/xsd" xmlns:ax29="http://ws.common.imc.h3c.com/xsd" xmlns:ax211="http://entity.plat.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://imc.h3c.com/imcplatUserService">
+      <xs:import namespace="http://entity.usr.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:import namespace="http://entity.plat.imc.h3c.com/xsd" />
+      <xs:element name="addUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addUserForPreReg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addUserForPreRegResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelUserForPreReg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelUserForPreRegResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUserForPreReg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax27:User" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUserForPreRegResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAllUserGroupResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax211:WSUserGroupArray" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserById">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByIdForPreReg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByIdForPreRegResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByNameAndIdentity">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByNameAndIdentityResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByNameAndIdentityForPreReg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserByNameAndIdentityForPreRegResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAllUserAppendResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUserAppendArray" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAllUserAppendsForPreRegisterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUserAppendArray" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAllUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAllUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUserArray" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserGroupById">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryUserGroupByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax27:WSUserGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.common.imc.h3c.com/xsd">
+      <xs:complexType name="WSCommonResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorCode" type="xs:int" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addUserForPreRegRequest">
+    <wsdl:part name="parameters" element="ns:addUserForPreReg" />
+  </wsdl:message>
+  <wsdl:message name="queryUserGroupByIdRequest">
+    <wsdl:part name="parameters" element="ns:queryUserGroupById" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserAppendsForPreRegisterResponse">
+    <wsdl:part name="parameters" element="ns:queryAllUserAppendsForPreRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByNameAndIdentityForPreRegRequest">
+    <wsdl:part name="parameters" element="ns:queryUserByNameAndIdentityForPreReg" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByNameAndIdentityForPreRegResponse">
+    <wsdl:part name="parameters" element="ns:queryUserByNameAndIdentityForPreRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserAppendResponse">
+    <wsdl:part name="parameters" element="ns:queryAllUserAppendResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByIdForPreRegRequest">
+    <wsdl:part name="parameters" element="ns:queryUserByIdForPreReg" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserAppendRequest" />
+  <wsdl:message name="modifyUserResponse">
+    <wsdl:part name="parameters" element="ns:modifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUserGroupByIdResponse">
+    <wsdl:part name="parameters" element="ns:queryUserGroupByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelUserResponse">
+    <wsdl:part name="parameters" element="ns:cancelUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelUserForPreRegRequest">
+    <wsdl:part name="parameters" element="ns:cancelUserForPreReg" />
+  </wsdl:message>
+  <wsdl:message name="cancelUserRequest">
+    <wsdl:part name="parameters" element="ns:cancelUser" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByNameAndIdentityResponse">
+    <wsdl:part name="parameters" element="ns:queryUserByNameAndIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserRequest">
+    <wsdl:part name="parameters" element="ns:queryAllUser" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserGroupRequest" />
+  <wsdl:message name="queryUserByIdResponse">
+    <wsdl:part name="parameters" element="ns:queryUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserForPreRegResponse">
+    <wsdl:part name="parameters" element="ns:modifyUserForPreRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByNameAndIdentityRequest">
+    <wsdl:part name="parameters" element="ns:queryUserByNameAndIdentity" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserResponse">
+    <wsdl:part name="parameters" element="ns:queryAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserAppendsForPreRegisterRequest" />
+  <wsdl:message name="queryUserByIdRequest">
+    <wsdl:part name="parameters" element="ns:queryUserById" />
+  </wsdl:message>
+  <wsdl:message name="cancelUserForPreRegResponse">
+    <wsdl:part name="parameters" element="ns:cancelUserForPreRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="addUserForPreRegResponse">
+    <wsdl:part name="parameters" element="ns:addUserForPreRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAllUserGroupResponse">
+    <wsdl:part name="parameters" element="ns:queryAllUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserRequest">
+    <wsdl:part name="parameters" element="ns:modifyUser" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserForPreRegRequest">
+    <wsdl:part name="parameters" element="ns:modifyUserForPreReg" />
+  </wsdl:message>
+  <wsdl:message name="queryUserByIdForPreRegResponse">
+    <wsdl:part name="parameters" element="ns:queryUserByIdForPreRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="addUserRequest">
+    <wsdl:part name="parameters" element="ns:addUser" />
+  </wsdl:message>
+  <wsdl:message name="addUserResponse">
+    <wsdl:part name="parameters" element="ns:addUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="imcplatUserServicePortType">
+    <wsdl:operation name="queryAllUserAppendsForPreRegister">
+      <wsdl:input wsaw:Action="urn:queryAllUserAppendsForPreRegister" message="ns:queryAllUserAppendsForPreRegisterRequest" />
+      <wsdl:output wsaw:Action="urn:queryAllUserAppendsForPreRegisterResponse" message="ns:queryAllUserAppendsForPreRegisterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByIdForPreReg">
+      <wsdl:input wsaw:Action="urn:queryUserByIdForPreReg" message="ns:queryUserByIdForPreRegRequest" />
+      <wsdl:output wsaw:Action="urn:queryUserByIdForPreRegResponse" message="ns:queryUserByIdForPreRegResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserForPreReg">
+      <wsdl:input wsaw:Action="urn:addUserForPreReg" message="ns:addUserForPreRegRequest" />
+      <wsdl:output wsaw:Action="urn:addUserForPreRegResponse" message="ns:addUserForPreRegResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserForPreReg">
+      <wsdl:input wsaw:Action="urn:modifyUserForPreReg" message="ns:modifyUserForPreRegRequest" />
+      <wsdl:output wsaw:Action="urn:modifyUserForPreRegResponse" message="ns:modifyUserForPreRegResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppend">
+      <wsdl:input wsaw:Action="urn:queryAllUserAppend" message="ns:queryAllUserAppendRequest" />
+      <wsdl:output wsaw:Action="urn:queryAllUserAppendResponse" message="ns:queryAllUserAppendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <wsdl:input wsaw:Action="urn:modifyUser" message="ns:modifyUserRequest" />
+      <wsdl:output wsaw:Action="urn:modifyUserResponse" message="ns:modifyUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUserById">
+      <wsdl:input wsaw:Action="urn:queryUserById" message="ns:queryUserByIdRequest" />
+      <wsdl:output wsaw:Action="urn:queryUserByIdResponse" message="ns:queryUserByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelUser">
+      <wsdl:input wsaw:Action="urn:cancelUser" message="ns:cancelUserRequest" />
+      <wsdl:output wsaw:Action="urn:cancelUserResponse" message="ns:cancelUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserGroup">
+      <wsdl:input wsaw:Action="urn:queryAllUserGroup" message="ns:queryAllUserGroupRequest" />
+      <wsdl:output wsaw:Action="urn:queryAllUserGroupResponse" message="ns:queryAllUserGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentity">
+      <wsdl:input wsaw:Action="urn:queryUserByNameAndIdentity" message="ns:queryUserByNameAndIdentityRequest" />
+      <wsdl:output wsaw:Action="urn:queryUserByNameAndIdentityResponse" message="ns:queryUserByNameAndIdentityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUser">
+      <wsdl:input wsaw:Action="urn:queryAllUser" message="ns:queryAllUserRequest" />
+      <wsdl:output wsaw:Action="urn:queryAllUserResponse" message="ns:queryAllUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentityForPreReg">
+      <wsdl:input wsaw:Action="urn:queryUserByNameAndIdentityForPreReg" message="ns:queryUserByNameAndIdentityForPreRegRequest" />
+      <wsdl:output wsaw:Action="urn:queryUserByNameAndIdentityForPreRegResponse" message="ns:queryUserByNameAndIdentityForPreRegResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUserGroupById">
+      <wsdl:input wsaw:Action="urn:queryUserGroupById" message="ns:queryUserGroupByIdRequest" />
+      <wsdl:output wsaw:Action="urn:queryUserGroupByIdResponse" message="ns:queryUserGroupByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <wsdl:input wsaw:Action="urn:addUser" message="ns:addUserRequest" />
+      <wsdl:output wsaw:Action="urn:addUserResponse" message="ns:addUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelUserForPreReg">
+      <wsdl:input wsaw:Action="urn:cancelUserForPreReg" message="ns:cancelUserForPreRegRequest" />
+      <wsdl:output wsaw:Action="urn:cancelUserForPreRegResponse" message="ns:cancelUserForPreRegResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="imcplatUserServiceSoap11Binding" type="ns:imcplatUserServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryUserByIdForPreReg">
+      <soap:operation soapAction="urn:queryUserByIdForPreReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppendsForPreRegister">
+      <soap:operation soapAction="urn:queryAllUserAppendsForPreRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserForPreReg">
+      <soap:operation soapAction="urn:addUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserForPreReg">
+      <soap:operation soapAction="urn:modifyUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <soap:operation soapAction="urn:modifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppend">
+      <soap:operation soapAction="urn:queryAllUserAppend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserById">
+      <soap:operation soapAction="urn:queryUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUser">
+      <soap:operation soapAction="urn:cancelUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserGroup">
+      <soap:operation soapAction="urn:queryAllUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentity">
+      <soap:operation soapAction="urn:queryUserByNameAndIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUser">
+      <soap:operation soapAction="urn:queryAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserGroupById">
+      <soap:operation soapAction="urn:queryUserGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentityForPreReg">
+      <soap:operation soapAction="urn:queryUserByNameAndIdentityForPreReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <soap:operation soapAction="urn:addUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUserForPreReg">
+      <soap:operation soapAction="urn:cancelUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="imcplatUserServiceSoap12Binding" type="ns:imcplatUserServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryUserByIdForPreReg">
+      <soap12:operation soapAction="urn:queryUserByIdForPreReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppendsForPreRegister">
+      <soap12:operation soapAction="urn:queryAllUserAppendsForPreRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserForPreReg">
+      <soap12:operation soapAction="urn:addUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserForPreReg">
+      <soap12:operation soapAction="urn:modifyUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <soap12:operation soapAction="urn:modifyUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppend">
+      <soap12:operation soapAction="urn:queryAllUserAppend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserById">
+      <soap12:operation soapAction="urn:queryUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUser">
+      <soap12:operation soapAction="urn:cancelUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserGroup">
+      <soap12:operation soapAction="urn:queryAllUserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentity">
+      <soap12:operation soapAction="urn:queryUserByNameAndIdentity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUser">
+      <soap12:operation soapAction="urn:queryAllUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserGroupById">
+      <soap12:operation soapAction="urn:queryUserGroupById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentityForPreReg">
+      <soap12:operation soapAction="urn:queryUserByNameAndIdentityForPreReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <soap12:operation soapAction="urn:addUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUserForPreReg">
+      <soap12:operation soapAction="urn:cancelUserForPreReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="imcplatUserServiceHttpBinding" type="ns:imcplatUserServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="queryUserByIdForPreReg">
+      <http:operation location="imcplatUserService/queryUserByIdForPreReg" />
+      <wsdl:input>
+        <mime:content part="queryUserByIdForPreReg" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryUserByIdForPreReg" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppendsForPreRegister">
+      <http:operation location="imcplatUserService/queryAllUserAppendsForPreRegister" />
+      <wsdl:input>
+        <mime:content part="queryAllUserAppendsForPreRegister" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAllUserAppendsForPreRegister" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserForPreReg">
+      <http:operation location="imcplatUserService/addUserForPreReg" />
+      <wsdl:input>
+        <mime:content part="addUserForPreReg" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addUserForPreReg" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserForPreReg">
+      <http:operation location="imcplatUserService/modifyUserForPreReg" />
+      <wsdl:input>
+        <mime:content part="modifyUserForPreReg" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="modifyUserForPreReg" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <http:operation location="imcplatUserService/modifyUser" />
+      <wsdl:input>
+        <mime:content part="modifyUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="modifyUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserAppend">
+      <http:operation location="imcplatUserService/queryAllUserAppend" />
+      <wsdl:input>
+        <mime:content part="queryAllUserAppend" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAllUserAppend" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserById">
+      <http:operation location="imcplatUserService/queryUserById" />
+      <wsdl:input>
+        <mime:content part="queryUserById" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryUserById" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUser">
+      <http:operation location="imcplatUserService/cancelUser" />
+      <wsdl:input>
+        <mime:content part="cancelUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUserGroup">
+      <http:operation location="imcplatUserService/queryAllUserGroup" />
+      <wsdl:input>
+        <mime:content part="queryAllUserGroup" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAllUserGroup" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentity">
+      <http:operation location="imcplatUserService/queryUserByNameAndIdentity" />
+      <wsdl:input>
+        <mime:content part="queryUserByNameAndIdentity" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryUserByNameAndIdentity" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllUser">
+      <http:operation location="imcplatUserService/queryAllUser" />
+      <wsdl:input>
+        <mime:content part="queryAllUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAllUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserGroupById">
+      <http:operation location="imcplatUserService/queryUserGroupById" />
+      <wsdl:input>
+        <mime:content part="queryUserGroupById" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryUserGroupById" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUserByNameAndIdentityForPreReg">
+      <http:operation location="imcplatUserService/queryUserByNameAndIdentityForPreReg" />
+      <wsdl:input>
+        <mime:content part="queryUserByNameAndIdentityForPreReg" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryUserByNameAndIdentityForPreReg" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <http:operation location="imcplatUserService/addUser" />
+      <wsdl:input>
+        <mime:content part="addUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelUserForPreReg">
+      <http:operation location="imcplatUserService/cancelUserForPreReg" />
+      <wsdl:input>
+        <mime:content part="cancelUserForPreReg" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelUserForPreReg" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="imcplatUserService">
+    <wsdl:port name="imcplatUserServiceHttpEndpoint" binding="ns:imcplatUserServiceHttpBinding">
+      <http:address location="http://10.153.130.26:8080/imcws/services/imcplatUserService/" />
+    </wsdl:port>
+    <wsdl:port name="imcplatUserServiceHttpSoap12Endpoint" binding="ns:imcplatUserServiceSoap12Binding">
+      <soap12:address location="http://10.153.130.26:8080/imcws/services/imcplatUserService/" />
+    </wsdl:port>
+    <wsdl:port name="imcplatUserServiceHttpSoap11Endpoint" binding="ns:imcplatUserServiceSoap11Binding">
+      <soap:address location="http://10.153.130.26:8080/imcws/services/imcplatUserService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,100 @@
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=9998
+
+
+scust_no(:11)=yan
+sholder_ac_no(:16)=wang
+END OF PACK
+
+vsmess(:256)=没有找到请求数据(功能号:567890)提供服务的BU组!
+END OF PACK
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=9998
+
+
+scust_no(:11)=yan
+sholder_ac_no(:16)=wang
+END OF PACK
+
+vsmess(:256)=没有找到请求数据(功能号:567890)提供服务的BU组!
+END OF PACK
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=9998
+
+
+scust_no(:11)=yan
+sholder_ac_no(:16)=wang
+END OF PACK
+
+vsmess(:256)=没有找到请求数据(功能号:567890)提供服务的BU组!
+END OF PACK
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=0
+
+HEAD:
+	RequestType=567890
+	firstflag=1
+	nextflag=0
+	hook.queuetype=0
+	hook.hostname+1=
+	recCount=1
+	retCode=9998
+
+
+scust_no(:11)=yan
+sholder_ac_no(:16)=wang
+END OF PACK
+
+vsmess(:256)=没有找到请求数据(功能号:567890)提供服务的BU组!
+END OF PACK

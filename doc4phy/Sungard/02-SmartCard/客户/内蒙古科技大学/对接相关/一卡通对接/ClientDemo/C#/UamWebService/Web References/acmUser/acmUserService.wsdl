@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ax28="http://ldap.user.acmws.imc.h3c.com/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://acm.imc.h3c.com/acmUserService" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax25="http://blacklist.user.acmws.imc.h3c.com/xsd" xmlns:ax214="http://service.user.acmws.imc.h3c.com/xsd" xmlns:ax22="http://ws.common.imc.h3c.com/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax21="http://accessuser.user.acmws.imc.h3c.com/xsd" xmlns:ax211="http://onlineuser.user.acmws.imc.h3c.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://acm.imc.h3c.com/acmUserService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ax215="http://service.user.acmws.imc.h3c.com/xsd" xmlns:ax24="http://accessuser.user.acmws.imc.h3c.com/xsd" xmlns:ax29="http://ldap.user.acmws.imc.h3c.com/xsd" xmlns:ax26="http://blacklist.user.acmws.imc.h3c.com/xsd" xmlns:ax218="http://ws.common.imc.h3c.com/xsd" xmlns:ax212="http://onlineuser.user.acmws.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://acm.imc.h3c.com/acmUserService">
+      <xs:import namespace="http://accessuser.user.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://blacklist.user.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ldap.user.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://onlineuser.user.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://service.user.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:element name="queryAcmUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:RetAcmUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmUserList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax24:AcmUserListQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmUserListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:RetAcmUserList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmUserServiceInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmUserServiceInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:RetAcmUserService" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryBlackList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax26:AcmBlackQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryBlackListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax26:RetAcmBlackInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="querySyncPolicyInfoList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax29:AcmSyncPolicyQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="querySyncPolicyInfoListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:RetAcmSyncPolicyInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="querySyncPolicyUserInfoList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax29:AcmSyncPolicyUserQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="querySyncPolicyUserInfoListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax29:RetAcmSyncPolicyUserInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmAccessDetailList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax212:AcmAccessDetailQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmAccessDetailListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:RetAcmAccessDetailList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmOnlineUserList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax212:AcmOnlineUserQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryAcmOnlineUserListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:RetAcmOnlineUserList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryServiceTemplateList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax215:AcmServiceTemplateQueryParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryServiceTemplateListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax215:RetAcmServiceTemplateInfoList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addAcmUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax24:AddAcmUserParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addAcmUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addBindingUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+            <xs:element minOccurs="0" name="param1" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addBindingUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addBlackList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addBlackListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="applyService">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax215:ApplyServiceParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="applyServiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelAcmUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelAcmUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelBindingUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelBindingUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelService">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax215:CancelServiceParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelServiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="clearOnlineInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="clearOnlineInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kickOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kickOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAcmUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax24:ModifyAcmUserParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAcmUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUserPassword">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax24:ModifyUserPsdParam" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyUserPasswordResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="removeBlackList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="removeBlackListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" type="xs:long" />
+            <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendMessageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax218:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:ax213="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://onlineuser.user.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="AcmAccessDetailQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceStartIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="offlineCause" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userMac" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userStartIp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmAccessDetailList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax213:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="acmAccessDetailSimpleInfo" nillable="true" type="ax211:AcmAccessDetailSimpleInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmAccessDetailSimpleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accessDetailId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="accessDuration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="accessEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="accessStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="influxByte" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="innerVlanId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="loginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="offlineCause" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="outerVlanId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="outfluxByte" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="port" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="solt" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="subSolt" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userMac" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcmOnlineUserQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="boundDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientLanguage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceStartIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="innerVlanId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="loginEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="loginStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="logonDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="outerVlanId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="port" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="securityStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="suspendDuration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="userEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userMac" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userSsid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userStartIp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmOnlineUserList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax213:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="onlineUserInfoArray" nillable="true" type="ax211:AcmOnlineUserSimpleInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmOnlineUserSimpleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="boundDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientLanguage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="influxByte" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="innerVlanId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="loginDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="loginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="loginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nasSlot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="nasSubSlot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="onlineDuration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="onlineUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="outerVlanId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="outfluxByte" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="port" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="securityStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userMac" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax27="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://blacklist.user.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="AcmBlackQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="joinReason" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userEndIpAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userMacAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userStartIpAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmBlackInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax27:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAcmBlackInfoList" nillable="true" type="ax25:RetAcmBlackInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAcmBlackInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax27:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="blackNameId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="joinDate" nillable="true" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="joinReason" nillable="true" type="xs:int" />
+              <xs:element minOccurs="0" name="userIpAddress" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="userMacAddress" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax210="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ldap.user.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="AcmSyncPolicyQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmSyncPolicyInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax210:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAcmSyncPolicyInfoList" nillable="true" type="ax28:RetAcmSyncPolicyInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAcmSyncPolicyInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax210:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="autoSync" nillable="true" type="xs:boolean" />
+              <xs:element minOccurs="0" name="configStatus" nillable="true" type="xs:int" />
+              <xs:element minOccurs="0" name="policyId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="policyName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="serverId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="syncPolicyId" nillable="true" type="xs:int" />
+              <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmSyncPolicyUserQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="policyId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serverId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userStatus" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmSyncPolicyUserInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax210:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAcmSyncPolicyUserInfoList" nillable="true" type="ax28:RetAcmSyncPolicyUserInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAcmSyncPolicyUserInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax210:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:int" />
+              <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax217="http://service.user.acmws.imc.h3c.com/xsd" xmlns:ax23="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://accessuser.user.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:import namespace="http://service.user.acmws.imc.h3c.com/xsd" />
+      <xs:complexType name="RetAcmUser">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax23:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="acmUser" nillable="true" type="ax21:AcmUser" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmUserCommonInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="boundDomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idleTimeout" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="invalidTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ipMacInfos" nillable="true" type="ax21:IpMacInfo" />
+          <xs:element minOccurs="0" name="logonDomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nasIpStr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nasPort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="onlineLimit" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="promptInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vlan" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="vlan2" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="wlanSsid" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IpMacInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mac" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcmUser">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:AcmUserCommonInfo">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="acmUserId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="blackUser" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ldapUser" type="xs:boolean" />
+              <xs:element minOccurs="0" name="platUserId" nillable="true" type="xs:long" />
+              <xs:element minOccurs="0" name="platUserName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmUserListQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="boundDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="computerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="creationEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="creationStartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="deviceEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceStartIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="identityNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="innerVlanId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="lastLogOffEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="lastLogOffStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="logonDomain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="maxConcurrentLimit" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="maxIdleTime" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="outerVlanId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="port" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultIndex" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userEndIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userMac" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userSsid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userStartIp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmUserList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax23:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="userSimpleInfoArray" nillable="true" type="ax21:AcmUserSimpleInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmUserSimpleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="invalidTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userGroupId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmUserService">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax23:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="acmUserService" nillable="true" type="ax21:AcmUserAppliedService" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcmUserAppliedService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceTemplateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userIp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AddAcmUserParam">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:AcmUserCommonInfo">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="applyServiceInfos" nillable="true" type="ax217:ApplyServiceInfo" />
+              <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="platUserId" nillable="true" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ModifyAcmUserParam">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:AcmUserCommonInfo">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ModifyUserPsdParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newPsd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax216="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.user.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="AcmServiceTemplateQueryParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resultSort" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resultSortType" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetAcmServiceTemplateInfoList">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax216:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="retAcmServiceTemplateInfoList" nillable="true" type="ax214:RetAcmServiceTemplateInfo" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RetAcmServiceTemplateInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assignAddress" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ldapPriority" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="safePolicy" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serviceDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceSuffix" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ApplyServiceInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceTemplateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="userIpAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ApplyServiceParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceInfo" nillable="true" type="ax214:ApplyServiceInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CancelServiceParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceList" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.common.imc.h3c.com/xsd">
+      <xs:complexType name="WSCommonResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorCode" type="xs:int" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="queryBlackListResponse">
+    <wsdl:part name="parameters" element="ns:queryBlackListResponse" />
+  </wsdl:message>
+  <wsdl:message name="applyServiceResponse">
+    <wsdl:part name="parameters" element="ns:applyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryServiceTemplateListResponse">
+    <wsdl:part name="parameters" element="ns:queryServiceTemplateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySyncPolicyUserInfoListResponse">
+    <wsdl:part name="parameters" element="ns:querySyncPolicyUserInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="clearOnlineInfoResponse">
+    <wsdl:part name="parameters" element="ns:clearOnlineInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmOnlineUserListRequest">
+    <wsdl:part name="parameters" element="ns:queryAcmOnlineUserList" />
+  </wsdl:message>
+  <wsdl:message name="removeBlackListResponse">
+    <wsdl:part name="parameters" element="ns:removeBlackListResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserRequest">
+    <wsdl:part name="parameters" element="ns:queryAcmUser" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserPasswordRequest">
+    <wsdl:part name="parameters" element="ns:modifyUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="modifyAcmUserRequest">
+    <wsdl:part name="parameters" element="ns:modifyAcmUser" />
+  </wsdl:message>
+  <wsdl:message name="cancelAcmUserRequest">
+    <wsdl:part name="parameters" element="ns:cancelAcmUser" />
+  </wsdl:message>
+  <wsdl:message name="addBindingUserResponse">
+    <wsdl:part name="parameters" element="ns:addBindingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="addBindingUserRequest">
+    <wsdl:part name="parameters" element="ns:addBindingUser" />
+  </wsdl:message>
+  <wsdl:message name="cancelServiceResponse">
+    <wsdl:part name="parameters" element="ns:cancelServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelServiceRequest">
+    <wsdl:part name="parameters" element="ns:cancelService" />
+  </wsdl:message>
+  <wsdl:message name="kickOutResponse">
+    <wsdl:part name="parameters" element="ns:kickOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAcmUserRequest">
+    <wsdl:part name="parameters" element="ns:addAcmUser" />
+  </wsdl:message>
+  <wsdl:message name="querySyncPolicyUserInfoListRequest">
+    <wsdl:part name="parameters" element="ns:querySyncPolicyUserInfoList" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserListResponse">
+    <wsdl:part name="parameters" element="ns:queryAcmUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmAccessDetailListRequest">
+    <wsdl:part name="parameters" element="ns:queryAcmAccessDetailList" />
+  </wsdl:message>
+  <wsdl:message name="queryBlackListRequest">
+    <wsdl:part name="parameters" element="ns:queryBlackList" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserServiceInfoRequest">
+    <wsdl:part name="parameters" element="ns:queryAcmUserServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserPasswordResponse">
+    <wsdl:part name="parameters" element="ns:modifyUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySyncPolicyInfoListRequest">
+    <wsdl:part name="parameters" element="ns:querySyncPolicyInfoList" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserServiceInfoResponse">
+    <wsdl:part name="parameters" element="ns:queryAcmUserServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserListRequest">
+    <wsdl:part name="parameters" element="ns:queryAcmUserList" />
+  </wsdl:message>
+  <wsdl:message name="queryServiceTemplateListRequest">
+    <wsdl:part name="parameters" element="ns:queryServiceTemplateList" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmUserResponse">
+    <wsdl:part name="parameters" element="ns:queryAcmUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmAccessDetailListResponse">
+    <wsdl:part name="parameters" element="ns:queryAcmAccessDetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="addBlackListResponse">
+    <wsdl:part name="parameters" element="ns:addBlackListResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyAcmUserResponse">
+    <wsdl:part name="parameters" element="ns:modifyAcmUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="applyServiceRequest">
+    <wsdl:part name="parameters" element="ns:applyService" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageResponse">
+    <wsdl:part name="parameters" element="ns:sendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="kickOutRequest">
+    <wsdl:part name="parameters" element="ns:kickOut" />
+  </wsdl:message>
+  <wsdl:message name="queryAcmOnlineUserListResponse">
+    <wsdl:part name="parameters" element="ns:queryAcmOnlineUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelBindingUserRequest">
+    <wsdl:part name="parameters" element="ns:cancelBindingUser" />
+  </wsdl:message>
+  <wsdl:message name="cancelBindingUserResponse">
+    <wsdl:part name="parameters" element="ns:cancelBindingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAcmUserResponse">
+    <wsdl:part name="parameters" element="ns:addAcmUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySyncPolicyInfoListResponse">
+    <wsdl:part name="parameters" element="ns:querySyncPolicyInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeBlackListRequest">
+    <wsdl:part name="parameters" element="ns:removeBlackList" />
+  </wsdl:message>
+  <wsdl:message name="addBlackListRequest">
+    <wsdl:part name="parameters" element="ns:addBlackList" />
+  </wsdl:message>
+  <wsdl:message name="clearOnlineInfoRequest">
+    <wsdl:part name="parameters" element="ns:clearOnlineInfo" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageRequest">
+    <wsdl:part name="parameters" element="ns:sendMessage" />
+  </wsdl:message>
+  <wsdl:message name="cancelAcmUserResponse">
+    <wsdl:part name="parameters" element="ns:cancelAcmUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="acmUserServicePortType">
+    <wsdl:operation name="cancelAcmUser">
+      <wsdl:input wsaw:Action="urn:cancelAcmUser" message="ns:cancelAcmUserRequest" />
+      <wsdl:output wsaw:Action="urn:cancelAcmUserResponse" message="ns:cancelAcmUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmOnlineUserList">
+      <wsdl:input wsaw:Action="urn:queryAcmOnlineUserList" message="ns:queryAcmOnlineUserListRequest" />
+      <wsdl:output wsaw:Action="urn:queryAcmOnlineUserListResponse" message="ns:queryAcmOnlineUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryBlackList">
+      <wsdl:input wsaw:Action="urn:queryBlackList" message="ns:queryBlackListRequest" />
+      <wsdl:output wsaw:Action="urn:queryBlackListResponse" message="ns:queryBlackListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeBlackList">
+      <wsdl:input wsaw:Action="urn:removeBlackList" message="ns:removeBlackListRequest" />
+      <wsdl:output wsaw:Action="urn:removeBlackListResponse" message="ns:removeBlackListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelBindingUser">
+      <wsdl:input wsaw:Action="urn:cancelBindingUser" message="ns:cancelBindingUserRequest" />
+      <wsdl:output wsaw:Action="urn:cancelBindingUserResponse" message="ns:cancelBindingUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserServiceInfo">
+      <wsdl:input wsaw:Action="urn:queryAcmUserServiceInfo" message="ns:queryAcmUserServiceInfoRequest" />
+      <wsdl:output wsaw:Action="urn:queryAcmUserServiceInfoResponse" message="ns:queryAcmUserServiceInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="clearOnlineInfo">
+      <wsdl:input wsaw:Action="urn:clearOnlineInfo" message="ns:clearOnlineInfoRequest" />
+      <wsdl:output wsaw:Action="urn:clearOnlineInfoResponse" message="ns:clearOnlineInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addBlackList">
+      <wsdl:input wsaw:Action="urn:addBlackList" message="ns:addBlackListRequest" />
+      <wsdl:output wsaw:Action="urn:addBlackListResponse" message="ns:addBlackListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserList">
+      <wsdl:input wsaw:Action="urn:queryAcmUserList" message="ns:queryAcmUserListRequest" />
+      <wsdl:output wsaw:Action="urn:queryAcmUserListResponse" message="ns:queryAcmUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyInfoList">
+      <wsdl:input wsaw:Action="urn:querySyncPolicyInfoList" message="ns:querySyncPolicyInfoListRequest" />
+      <wsdl:output wsaw:Action="urn:querySyncPolicyInfoListResponse" message="ns:querySyncPolicyInfoListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="applyService">
+      <wsdl:input wsaw:Action="urn:applyService" message="ns:applyServiceRequest" />
+      <wsdl:output wsaw:Action="urn:applyServiceResponse" message="ns:applyServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryServiceTemplateList">
+      <wsdl:input wsaw:Action="urn:queryServiceTemplateList" message="ns:queryServiceTemplateListRequest" />
+      <wsdl:output wsaw:Action="urn:queryServiceTemplateListResponse" message="ns:queryServiceTemplateListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmAccessDetailList">
+      <wsdl:input wsaw:Action="urn:queryAcmAccessDetailList" message="ns:queryAcmAccessDetailListRequest" />
+      <wsdl:output wsaw:Action="urn:queryAcmAccessDetailListResponse" message="ns:queryAcmAccessDetailListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyUserInfoList">
+      <wsdl:input wsaw:Action="urn:querySyncPolicyUserInfoList" message="ns:querySyncPolicyUserInfoListRequest" />
+      <wsdl:output wsaw:Action="urn:querySyncPolicyUserInfoListResponse" message="ns:querySyncPolicyUserInfoListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUser">
+      <wsdl:input wsaw:Action="urn:queryAcmUser" message="ns:queryAcmUserRequest" />
+      <wsdl:output wsaw:Action="urn:queryAcmUserResponse" message="ns:queryAcmUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelService">
+      <wsdl:input wsaw:Action="urn:cancelService" message="ns:cancelServiceRequest" />
+      <wsdl:output wsaw:Action="urn:cancelServiceResponse" message="ns:cancelServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addAcmUser">
+      <wsdl:input wsaw:Action="urn:addAcmUser" message="ns:addAcmUserRequest" />
+      <wsdl:output wsaw:Action="urn:addAcmUserResponse" message="ns:addAcmUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="kickOut">
+      <wsdl:input wsaw:Action="urn:kickOut" message="ns:kickOutRequest" />
+      <wsdl:output wsaw:Action="urn:kickOutResponse" message="ns:kickOutResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addBindingUser">
+      <wsdl:input wsaw:Action="urn:addBindingUser" message="ns:addBindingUserRequest" />
+      <wsdl:output wsaw:Action="urn:addBindingUserResponse" message="ns:addBindingUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <wsdl:input wsaw:Action="urn:sendMessage" message="ns:sendMessageRequest" />
+      <wsdl:output wsaw:Action="urn:sendMessageResponse" message="ns:sendMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyAcmUser">
+      <wsdl:input wsaw:Action="urn:modifyAcmUser" message="ns:modifyAcmUserRequest" />
+      <wsdl:output wsaw:Action="urn:modifyAcmUserResponse" message="ns:modifyAcmUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <wsdl:input wsaw:Action="urn:modifyUserPassword" message="ns:modifyUserPasswordRequest" />
+      <wsdl:output wsaw:Action="urn:modifyUserPasswordResponse" message="ns:modifyUserPasswordResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="acmUserServiceHttpBinding" type="ns:acmUserServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="queryAcmOnlineUserList">
+      <http:operation location="acmUserService/queryAcmOnlineUserList" />
+      <wsdl:input>
+        <mime:content part="queryAcmOnlineUserList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAcmOnlineUserList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelAcmUser">
+      <http:operation location="acmUserService/cancelAcmUser" />
+      <wsdl:input>
+        <mime:content part="cancelAcmUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelAcmUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBlackList">
+      <http:operation location="acmUserService/queryBlackList" />
+      <wsdl:input>
+        <mime:content part="queryBlackList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryBlackList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelBindingUser">
+      <http:operation location="acmUserService/cancelBindingUser" />
+      <wsdl:input>
+        <mime:content part="cancelBindingUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelBindingUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeBlackList">
+      <http:operation location="acmUserService/removeBlackList" />
+      <wsdl:input>
+        <mime:content part="removeBlackList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="removeBlackList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearOnlineInfo">
+      <http:operation location="acmUserService/clearOnlineInfo" />
+      <wsdl:input>
+        <mime:content part="clearOnlineInfo" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="clearOnlineInfo" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserServiceInfo">
+      <http:operation location="acmUserService/queryAcmUserServiceInfo" />
+      <wsdl:input>
+        <mime:content part="queryAcmUserServiceInfo" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAcmUserServiceInfo" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserList">
+      <http:operation location="acmUserService/queryAcmUserList" />
+      <wsdl:input>
+        <mime:content part="queryAcmUserList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAcmUserList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBlackList">
+      <http:operation location="acmUserService/addBlackList" />
+      <wsdl:input>
+        <mime:content part="addBlackList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addBlackList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyInfoList">
+      <http:operation location="acmUserService/querySyncPolicyInfoList" />
+      <wsdl:input>
+        <mime:content part="querySyncPolicyInfoList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="querySyncPolicyInfoList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyService">
+      <http:operation location="acmUserService/applyService" />
+      <wsdl:input>
+        <mime:content part="applyService" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="applyService" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryServiceTemplateList">
+      <http:operation location="acmUserService/queryServiceTemplateList" />
+      <wsdl:input>
+        <mime:content part="queryServiceTemplateList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryServiceTemplateList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmAccessDetailList">
+      <http:operation location="acmUserService/queryAcmAccessDetailList" />
+      <wsdl:input>
+        <mime:content part="queryAcmAccessDetailList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAcmAccessDetailList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUser">
+      <http:operation location="acmUserService/queryAcmUser" />
+      <wsdl:input>
+        <mime:content part="queryAcmUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryAcmUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyUserInfoList">
+      <http:operation location="acmUserService/querySyncPolicyUserInfoList" />
+      <wsdl:input>
+        <mime:content part="querySyncPolicyUserInfoList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="querySyncPolicyUserInfoList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelService">
+      <http:operation location="acmUserService/cancelService" />
+      <wsdl:input>
+        <mime:content part="cancelService" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelService" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAcmUser">
+      <http:operation location="acmUserService/addAcmUser" />
+      <wsdl:input>
+        <mime:content part="addAcmUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addAcmUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBindingUser">
+      <http:operation location="acmUserService/addBindingUser" />
+      <wsdl:input>
+        <mime:content part="addBindingUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="addBindingUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kickOut">
+      <http:operation location="acmUserService/kickOut" />
+      <wsdl:input>
+        <mime:content part="kickOut" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="kickOut" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <http:operation location="acmUserService/sendMessage" />
+      <wsdl:input>
+        <mime:content part="sendMessage" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="sendMessage" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAcmUser">
+      <http:operation location="acmUserService/modifyAcmUser" />
+      <wsdl:input>
+        <mime:content part="modifyAcmUser" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="modifyAcmUser" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <http:operation location="acmUserService/modifyUserPassword" />
+      <wsdl:input>
+        <mime:content part="modifyUserPassword" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="modifyUserPassword" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="acmUserServiceSoap11Binding" type="ns:acmUserServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryAcmOnlineUserList">
+      <soap:operation soapAction="urn:queryAcmOnlineUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelAcmUser">
+      <soap:operation soapAction="urn:cancelAcmUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBlackList">
+      <soap:operation soapAction="urn:queryBlackList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelBindingUser">
+      <soap:operation soapAction="urn:cancelBindingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeBlackList">
+      <soap:operation soapAction="urn:removeBlackList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearOnlineInfo">
+      <soap:operation soapAction="urn:clearOnlineInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserServiceInfo">
+      <soap:operation soapAction="urn:queryAcmUserServiceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserList">
+      <soap:operation soapAction="urn:queryAcmUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBlackList">
+      <soap:operation soapAction="urn:addBlackList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyInfoList">
+      <soap:operation soapAction="urn:querySyncPolicyInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyService">
+      <soap:operation soapAction="urn:applyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryServiceTemplateList">
+      <soap:operation soapAction="urn:queryServiceTemplateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmAccessDetailList">
+      <soap:operation soapAction="urn:queryAcmAccessDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUser">
+      <soap:operation soapAction="urn:queryAcmUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyUserInfoList">
+      <soap:operation soapAction="urn:querySyncPolicyUserInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelService">
+      <soap:operation soapAction="urn:cancelService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAcmUser">
+      <soap:operation soapAction="urn:addAcmUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBindingUser">
+      <soap:operation soapAction="urn:addBindingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kickOut">
+      <soap:operation soapAction="urn:kickOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <soap:operation soapAction="urn:sendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAcmUser">
+      <soap:operation soapAction="urn:modifyAcmUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <soap:operation soapAction="urn:modifyUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="acmUserServiceSoap12Binding" type="ns:acmUserServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryAcmOnlineUserList">
+      <soap12:operation soapAction="urn:queryAcmOnlineUserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelAcmUser">
+      <soap12:operation soapAction="urn:cancelAcmUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBlackList">
+      <soap12:operation soapAction="urn:queryBlackList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelBindingUser">
+      <soap12:operation soapAction="urn:cancelBindingUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeBlackList">
+      <soap12:operation soapAction="urn:removeBlackList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearOnlineInfo">
+      <soap12:operation soapAction="urn:clearOnlineInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserServiceInfo">
+      <soap12:operation soapAction="urn:queryAcmUserServiceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUserList">
+      <soap12:operation soapAction="urn:queryAcmUserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBlackList">
+      <soap12:operation soapAction="urn:addBlackList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyInfoList">
+      <soap12:operation soapAction="urn:querySyncPolicyInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyService">
+      <soap12:operation soapAction="urn:applyService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryServiceTemplateList">
+      <soap12:operation soapAction="urn:queryServiceTemplateList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmAccessDetailList">
+      <soap12:operation soapAction="urn:queryAcmAccessDetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAcmUser">
+      <soap12:operation soapAction="urn:queryAcmUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySyncPolicyUserInfoList">
+      <soap12:operation soapAction="urn:querySyncPolicyUserInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelService">
+      <soap12:operation soapAction="urn:cancelService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAcmUser">
+      <soap12:operation soapAction="urn:addAcmUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBindingUser">
+      <soap12:operation soapAction="urn:addBindingUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kickOut">
+      <soap12:operation soapAction="urn:kickOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <soap12:operation soapAction="urn:sendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAcmUser">
+      <soap12:operation soapAction="urn:modifyAcmUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <soap12:operation soapAction="urn:modifyUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="acmUserService">
+    <wsdl:port name="acmUserServiceHttpSoap11Endpoint" binding="ns:acmUserServiceSoap11Binding">
+      <soap:address location="http://192.168.64.1:8080/imcws/services/acmUserService/" />
+    </wsdl:port>
+    <wsdl:port name="acmUserServiceHttpSoap12Endpoint" binding="ns:acmUserServiceSoap12Binding">
+      <soap12:address location="http://192.168.64.1:8080/imcws/services/acmUserService/" />
+    </wsdl:port>
+    <wsdl:port name="acmUserServiceHttpEndpoint" binding="ns:acmUserServiceHttpBinding">
+      <http:address location="http://192.168.64.1:8080/imcws/services/acmUserService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

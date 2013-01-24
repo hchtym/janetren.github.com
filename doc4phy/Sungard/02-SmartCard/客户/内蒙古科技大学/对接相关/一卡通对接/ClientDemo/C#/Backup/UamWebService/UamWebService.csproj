@@ -1,0 +1,522 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{751AD63E-0186-4572-BE02-3002207170A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UamWebService</RootNamespace>
+    <AssemblyName>UamWebService</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDetailListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessDetailListForm.Designer.cs">
+      <DependentUpon>AccessDetailListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessDetailQueryInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessDetailQueryInfoForm.Designer.cs">
+      <DependentUpon>AccessDetailQueryInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAcmUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAcmUserForm.Designer.cs">
+      <DependentUpon>AddAcmUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplyServiceForm.Designer.cs">
+      <DependentUpon>ApplyServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetAddForm.Designer.cs">
+      <DependentUpon>AssetAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetListForm.Designer.cs">
+      <DependentUpon>AssetListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetListQueryInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetListQueryInfoForm.Designer.cs">
+      <DependentUpon>AssetListQueryInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlacklistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlacklistForm.Designer.cs">
+      <DependentUpon>BlacklistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlacklistQueryInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlacklistQueryInfoForm.Designer.cs">
+      <DependentUpon>BlacklistQueryInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelServiceForm.Designer.cs">
+      <DependentUpon>CancelServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CombItem.cs" />
+    <Compile Include="DeployMsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeployMsgForm.Designer.cs">
+      <DependentUpon>DeployMsgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LdapConfigListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LdapConfigListForm.Designer.cs">
+      <DependentUpon>LdapConfigListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LdapUserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LdapUserListForm.Designer.cs">
+      <DependentUpon>LdapUserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetModifyForm.Designer.cs">
+      <DependentUpon>AssetModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyPwdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyPwdForm.Designer.cs">
+      <DependentUpon>ModifyPwdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyUserForm.Designer.cs">
+      <DependentUpon>ModifyUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineUserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineUserListForm.Designer.cs">
+      <DependentUpon>OnlineUserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineUserQueryInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineUserQueryInfoForm.Designer.cs">
+      <DependentUpon>OnlineUserQueryInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccessDetailListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccessDetailListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessDetailQueryInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccessDetailQueryInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAcmUserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddAcmUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplyServiceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ApplyServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetAddForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssetAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssetListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetListQueryInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssetListQueryInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlacklistForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BlacklistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlacklistQueryInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BlacklistQueryInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelServiceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CancelServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeployMsgForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeployMsgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LdapConfigListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LdapConfigListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LdapUserListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LdapUserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetModifyForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssetModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPwdForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModifyPwdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyUserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModifyUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineUserListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OnlineUserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineUserQueryInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OnlineUserQueryInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetGroupListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssetGroupListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLdapPolicyForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectLdapPolicyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceTemplateListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceTemplateListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListQueryInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserListQueryInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\imcPlatUser\imcplatUserService.wsdl" />
+    <None Include="Web References\imcPlatUser\queryAllUserAppendResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\queryAllUserAppendsForPreRegisterResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\queryAllUserGroupResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\imcPlatUser\WSCommonResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\WSUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\WSUserArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlatUser\WSUserGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlat\imcplatService.wsdl" />
+    <None Include="Web References\imcPlat\logoutResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\imcPlat\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\imcPlat\WSCommonResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AssetGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetGroupListForm.Designer.cs">
+      <DependentUpon>AssetGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLdapPolicyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLdapPolicyForm.Designer.cs">
+      <DependentUpon>SelectLdapPolicyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceTemplateListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceTemplateListForm.Designer.cs">
+      <DependentUpon>ServiceTemplateListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListQueryInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserListQueryInfoForm.Designer.cs">
+      <DependentUpon>UserListQueryInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\acmUser\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\damAsset\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fee\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\imcPlatUser\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\imcPlat\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.153.128.106:8080/imcws/services/acmUserService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\acmUser\</RelPath>
+      <UpdateFromURL>http://10.153.128.106:8080/imcws/services/acmUserService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UamWebService_acmUser_acmUserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.153.128.106:8080/imcws/services/damAssetService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\damAsset\</RelPath>
+      <UpdateFromURL>http://10.153.128.106:8080/imcws/services/damAssetService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UamWebService_damAsset_damAssetService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.153.128.106:8080/imcws/services/feeService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fee\</RelPath>
+      <UpdateFromURL>http://10.153.128.106:8080/imcws/services/feeService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UamWebService_fee_feeService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://127.0.0.1:8080/imcws/services/imcplatService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\imcPlat\</RelPath>
+      <UpdateFromURL>http://127.0.0.1:8080/imcws/services/imcplatService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UamWebService_imcPlat_imcplatService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://127.0.0.1:8080/imcws/services/imcplatUserService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\imcPlatUser\</RelPath>
+      <UpdateFromURL>http://127.0.0.1:8080/imcws/services/imcplatUserService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UamWebService_imcPlatUser_imcplatUserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ladpUser.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\detail.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\apply.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cancel.gif" />
+    <None Include="Web References\acmUser\acmUserService.wsdl" />
+    <None Include="Web References\acmUser\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\acmUser\RetAcmAccessDetailList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmBlackInfoList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmOnlineUserList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmServiceTemplateInfoList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmSyncPolicyInfoList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmSyncPolicyUserInfoList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmUserList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\RetAcmUserService.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\acmUser\WSCommonResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\damAsset\damAssetService.wsdl" />
+    <None Include="Web References\damAsset\queryAssetGroupResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\damAsset\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\damAsset\RetAssetDetailInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\damAsset\RetAssetInfoList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\damAsset\WSCommonResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\fee\feeService.wsdl" />
+    <None Include="Web References\fee\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\fee\RetUserBalance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\fee\WSCommonResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

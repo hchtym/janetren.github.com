@@ -1,0 +1,176 @@
+-- 备份交易历史流水
+create table ykt_his.t_tif_tradeserial_his_20110922 
+as 
+select * from ykt_his.t_tif_tradeserial_his where
+customer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1)
+);
+
+
+-- 删除交易历史流水
+delete from ykt_his.t_tif_tradeserial_his 
+where 
+customer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1)
+);
+commit;
+
+4659150   rows deleted;
+8504457   rows deleted;
+4643840   rows deleted;
+1298073   rows deleted;
+
+-- 备份账务历史流水
+create table  ykt_his.t_tif_tradelog_his_20110922 
+as
+select * from ykt_his.t_tif_tradelog_his
+where 
+act_id in (select account_id from t_aif_account where 
+customer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1))
+);
+
+-- 删除账务历史流水
+delete from ykt_his.t_tif_tradelog_his 
+where 
+act_id in (select account_id from t_aif_account where 
+customer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1))
+);
+
+commit;
+4642060   rows deleted;
+8473713   rows deleted;
+4604180   rows deleted;
+1297045   rows deleted;
+
+
+
+-- 备份交易流水
+create table ykt_his.t_tif_rcvdtl_20110922 as 
+select * from t_tif_rcvdtl
+where card_no in (select card_id from t_pif_card
+where cosumer_id in 
+(select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1) ));
+
+-- 删除交易流水
+delete from ykt_cur.t_tif_rcvdtl
+where card_no in (select card_id from t_pif_card
+where cosumer_id in 
+(select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1) ));
+commit;
+468 rows deleted;
+4642442   rows deleted;
+8376890   rows deleted;
+4515555   rows deleted;
+1437742   rows deleted;
+
+
+
+-- 备份就餐分析流水
+create table ykt_his.t_rcstatdata_20110922 as 
+select * from t_rcstatdata
+where card_no in (select card_id from t_pif_card
+where cosumer_id in 
+(select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1) ));
+
+-- 删除就餐分析流水
+delete from t_rcstatdata
+where card_no in (select card_id from t_pif_card
+where cosumer_id in 
+(select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1) ));
+commit;
+5648333 rows deleted.
+
+-- 备份照片信息
+create table ykt_his.t_cif_photo_20110922 as
+select * from t_cif_photo where 
+cut_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1)
+);
+
+-- 删除照片信息
+delete from t_cif_photo where 
+cut_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1)
+);
+commit;
+9481 rows deleted
+
+-- 备份发卡信息
+create table ykt_his.t_pif_card_20110922 as
+select * from ykt_cur.t_pif_card 
+where cosumer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1));
+
+-- 删除发卡信息
+delete from ykt_cur.t_pif_card 
+where cosumer_id in (
+select cut_id from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1));
+commit;
+14709   rows deleted;
+
+-- 备份客户信息
+create table ykt_his.t_cif_customer_20110922 as
+select * from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1);
+
+-- 删除客户信息
+delete from t_cif_customer where 
+1=1
+and cut_type in (11,12,13)
+and substr(stuemp_no,1,2)  in ('04','05','06','07')
+and stuemp_no not in (select stuemp_no from hrb_temp1);
+commit;
+9488   rows deleted;

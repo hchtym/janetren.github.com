@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax22="http://ws.common.imc.h3c.com/xsd" xmlns:ns="http://acm.imc.h3c.com/feeService" xmlns:ax21="http://fee.acmws.imc.h3c.com/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://acm.imc.h3c.com/feeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ax24="http://fee.acmws.imc.h3c.com/xsd" xmlns:ax25="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://acm.imc.h3c.com/feeService">
+      <xs:import namespace="http://fee.acmws.imc.h3c.com/xsd" />
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:element name="queryBalance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="queryBalanceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:RetUserBalance" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="pay">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="param0" nillable="true" type="ax24:PaymentInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="payResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax25:WSCommonResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:ax23="http://ws.common.imc.h3c.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fee.acmws.imc.h3c.com/xsd">
+      <xs:import namespace="http://ws.common.imc.h3c.com/xsd" />
+      <xs:complexType name="RetUserBalance">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax23:WSCommonResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="balance" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="PaymentInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.common.imc.h3c.com/xsd">
+      <xs:complexType name="WSCommonResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorCode" type="xs:int" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="payResponse">
+    <wsdl:part name="parameters" element="ns:payResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryBalanceRequest">
+    <wsdl:part name="parameters" element="ns:queryBalance" />
+  </wsdl:message>
+  <wsdl:message name="payRequest">
+    <wsdl:part name="parameters" element="ns:pay" />
+  </wsdl:message>
+  <wsdl:message name="queryBalanceResponse">
+    <wsdl:part name="parameters" element="ns:queryBalanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="feeServicePortType">
+    <wsdl:operation name="pay">
+      <wsdl:input wsaw:Action="urn:pay" message="ns:payRequest" />
+      <wsdl:output wsaw:Action="urn:payResponse" message="ns:payResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <wsdl:input wsaw:Action="urn:queryBalance" message="ns:queryBalanceRequest" />
+      <wsdl:output wsaw:Action="urn:queryBalanceResponse" message="ns:queryBalanceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="feeServiceSoap12Binding" type="ns:feeServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="pay">
+      <soap12:operation soapAction="urn:pay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <soap12:operation soapAction="urn:queryBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="feeServiceSoap11Binding" type="ns:feeServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="pay">
+      <soap:operation soapAction="urn:pay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <soap:operation soapAction="urn:queryBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="feeServiceHttpBinding" type="ns:feeServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="pay">
+      <http:operation location="feeService/pay" />
+      <wsdl:input>
+        <mime:content part="pay" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="pay" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <http:operation location="feeService/queryBalance" />
+      <wsdl:input>
+        <mime:content part="queryBalance" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="queryBalance" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="feeService">
+    <wsdl:port name="feeServiceHttpEndpoint" binding="ns:feeServiceHttpBinding">
+      <http:address location="http://192.168.64.1:8080/imcws/services/feeService/" />
+    </wsdl:port>
+    <wsdl:port name="feeServiceHttpSoap12Endpoint" binding="ns:feeServiceSoap12Binding">
+      <soap12:address location="http://192.168.64.1:8080/imcws/services/feeService/" />
+    </wsdl:port>
+    <wsdl:port name="feeServiceHttpSoap11Endpoint" binding="ns:feeServiceSoap11Binding">
+      <soap:address location="http://192.168.64.1:8080/imcws/services/feeService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

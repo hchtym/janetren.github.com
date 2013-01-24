@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UamWebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UamWebService_imcPlat_imcplatService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.252.252:8080/imcws/services/imcplatService/</Value>
+    </Setting>
+    <Setting Name="UamWebService_imcPlatUser_imcplatUserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.252.252:8080/imcws/services/imcplatUserService/</Value>
+    </Setting>
+    <Setting Name="UamWebService_fee_feeService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.252.252:8080/imcws/services/feeService/</Value>
+    </Setting>
+    <Setting Name="UamWebService_damAsset_damAssetService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.252.252:8080/imcws/services/damAssetService/</Value>
+    </Setting>
+    <Setting Name="UamWebService_acmUser_acmUserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.252.252:8080/imcws/services/acmUserService/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
