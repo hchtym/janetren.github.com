@@ -1,0 +1,47 @@
+我看了，问题特别多？
+
+1、 请先看完新的招标文件再做方案。水、电系统为已有系统对接。不要弄成了新系统。
+
+2、 如果我们采用其它厂商的方案来修改，一定要将其它厂商报名称隐掉（比如万欣、还有校门出入管理系统）
+
+3、 招文件要求按20万和10万来设备，我们在方案中没有按此来描述。
+
+4、 如果招标文件没有要求的应用如洗衣等可以单独作为一个扩展应用来写，并明确注明为可扩展应用。
+
+5、 注意招标文件要求的指标，如电话为10万用户32路，20万用户64路。要求在POS消费就可以完成转帐。这种错误非常多，在方案和我已有作了部分标注。
+
+6、 注意方案的立场，现在是银行招标，在方案中不能建设校园卡与银行卡不作绑定。
+
+7、 注意CPU卡在方案中的体现，方案中全部设备都是按逻辑加密卡来写的。
+
+8、 注意子系统的图不要乱用，要与方案相匹配。
+
+ 
+
+ 
+
+张小铭 * 企业与高等教育事业部 * SunGard 中国区 * 中国 上海 张江高科 郭守敬路498号 浦东软件园 1号楼 1楼 201203 
+
+Tony * Sales Director South China  * HE & Corporation Division. * SunGard China * 1F, 1Bldg, 498 GuoShouJing Rd, Zhangjiang Park, Shanghai, 201203, P.R. China *Tel 86 21 5169 7188-3205 * Mobile 13902399759 
+
+Email xiaoming.zhang@sungard.com * Fax 86 21 50800672 * www.sungard.com/china
+
+P Think before you print
+
+CONFIDENTIALITY: This e-mail (including any attachments) may contain confidential, proprietary and
+
+privileged information, and unauthorized disclosure or use is prohibited. If you received this e-mail in error, 
+
+please notify the sender and delete this e-mail from your system.
+
+ 
+
+发件人: Zhai, Yijin 
+发送时间: 2009年9月16日 15:57
+收件人: Zhang, Xiaoming; Han, Haidong
+抄送: Zhou, Xinyu
+主题: 中行项目的投标技术方案，大家看一下，没问题就定稿了
+
+ 
+
+ 
