@@ -1,0 +1,7 @@
+编辑ykt_ck.ico_menu表，找到"生成考勤报表（人事用）"列，修改为"考勤补贴计算报表"
+
+关闭tomcat
+备份以前的考勤系统到其他目录
+部署新的到webapp
+修改\webapps\check\WEB-INF\conf\config.properties中数据库连接参数
+启动tomcat

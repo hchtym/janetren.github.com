@@ -1,0 +1,35 @@
+1.bRet=DRTPInitialize();  
+	if (bRet == FALSE)      
+	{     
+		MessageOut("通讯初始化失败",3);
+		return FALSE;   
+	}   
+
+
+2.bRet=m_pTrade8583->APP_Init(omsg);
+if (bRet == FALSE)      
+	{    
+		return ERROR_FAIL;      
+	}    
+
+
+BOOL CTrade8583::APP_Init(char *omsg) 
+{
+	g_commhandle=DRTPConnect(gNl8900Info.g_server,gNl8900Info.g_serverport,10000);
+	if (g_commhandle == NULL)
+	{      
+		MessageOut("通讯故障",3);
+		return FALSE;   
+	}       
+	return TRUE;            
+} 
+
+3.commlen=DRTPReceive(g_commhandle,(char*)commbuf,sizeof(commbuf),0);
+	if (commlen <= 0)
+	{
+		MessageOut("通讯故障",3);
+		return ERROR_FAIL;
+	}
+
+4.	APP_Done(); 
+

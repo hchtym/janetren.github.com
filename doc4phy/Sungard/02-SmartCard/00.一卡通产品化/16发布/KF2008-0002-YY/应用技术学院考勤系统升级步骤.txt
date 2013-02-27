@@ -1,0 +1,10 @@
+先执行下面脚本
+insert into YKT_CUR.T_PIF_DICTIONARY(DICT_NO, DICT_VALUE, DICT_NAME, DICT_CAPTION) values(1200,'9','考勤类别','学生考勤');
+insert into YKT_CK.ICO_MENU(ID, PID, MENU_NAME, URL, TITLE, TARGET, ICON, ICONOPEN, OPENED, SORT_FLAG)values
+ ('1508','15','学生考勤报表','checkStatic.do?method=goMakeCheckReportStu','','main',Null,Null,Null,11);
+ 
+1、把tomcat5/webapp/下的check转移到其它地方，但不能放在tomcat5的下面
+2、把新的check放到tomcat5下面
+3、把check.xml名称修改为0check.xml，并修改里面的数据库连接地址，数据库登录名和密码
+4、把check.xml放到tomcat5\conf\Catalina\localhost下
+5、启动tomcat

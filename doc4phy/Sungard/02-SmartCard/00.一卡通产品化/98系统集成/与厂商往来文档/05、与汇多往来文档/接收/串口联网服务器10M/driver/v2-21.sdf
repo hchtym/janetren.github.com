@@ -1,0 +1,37 @@
+I=$NET;D=Network Settings;T=GROUP
+I=FE;D=MAC-address;T=STRING;C=ETHERNETCTRL
+I=IP;D=IP-address;T=STRING;C=IPCTRL
+I=PN;D=Port;T=WORD;C=EDIT
+I=TP;D=Transport protocol;T=INT;C=STATIC;O=0- UDP/0/1- TCP/1
+I=CT;E=1;D=TCP Connection timeout (min);T=INT;C=EDIT/SPIN/0/1/1/10;O=0- Disabled/0;S=TP==1?"e":"i";V=CT>255?"Maximum timeout is 255 minutes":""
+I=RM;D=Routing Mode;T=INT;C=STATIC;O=0- Slave/0/1- Master/1
+I=DI;E=1;D=Destination IP-address;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=DP;E=1;D=Destination port;T=WORD;C=EDIT;S=RM!=0?"e":"i"
+I=GI;E=1;D=Gateway IP-address;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=NM;E=1;D=Subnet mask;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=$SER;D=Serial Settings;T=GROUP
+I=SI;D=Serial interface;T=BYTE;C=STATIC;O=0- Full-duplex/0/1- Half-duplex/1/2- Automatic/2
+I=FC;D=RTS/CTS flow control;T=BYTE;C=STATIC;O=0- Disabled (always ON) /0/1- Local/1
+I=BR;D=Baud rate;T=BYTE;C=STATIC;O=8- 150 bps/8/9- 300 bps/9/10- 600 bps/10/0- 1200 bps/0/1- 2400 bps/1/2- 4800 bps/2/3- 9600 bps/3/4- 19200 bps/4/11- 28800 bps/11/5- 38400 bps/5/6- 57600 bps/6/7- 115200 bps/7
+I=PR;D=Parity;T=BYTE;C=STATIC;O=0- None/0/1- Even/1/2- Odd/2/3- Mark/3/4- Space/4
+I=BB;D=Data bits;T=BYTE;C=STATIC;O=0- 7 bits/0/1- 8 bits/1
+I=SE;D=Soft entry into Serial programming mode;T=BYTE;C=STATIC;O=0- Disabled/0/1- Enabled/1
+I=RC;D=On-the-Fly commands;T=BYTE;C=STATIC;O=0- Disabled/0/1- Enabled/1
+I=$OBP;D=Outbound packets;T=GROUP
+I=ML;D=Max packet length;T=BYTE;C=EDIT/SPIN/0/10
+I=MD;D=Max intercharacter delay;T=BYTE;C=EDIT/SPIN/0/1/1/10
+I=SA;D=Start on any char;T=BYTE;C=STATIC;O=Yes/1/No/0
+I=F1;D=Use start-char 1;T=BYTE;C=STATIC;O=0- No/0/1- Yes/1
+I=S1;D=Start char 1 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=S1>255?"ASCII code cannot exceed 255":""
+I=U1;D=Use stop-char 1;T=BYTE;C=STATIC;O=0- No/0/1- Yes/1/
+I=E1;D=Stop-char 1 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=E1>255?"ASCII code cannot exceed 255":""
+I=P1;D=Num. of post-chars for stop char 1;T=BYTE;C=EDIT/SPIN/0/1/1/1;V=P1>15?"Maximum number of post-characters is 15":""
+I=S2;D=Start char 2 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=S2>255?"ASCII code cannot exceed 255":""
+I=U2;D=Use stop-char 2;T=BYTE;C=STATIC;O=0- No/0/1- Yes/1/
+I=E2;D=Stop-char 2 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=E2>255?"ASCII code cannot exceed 255":""
+I=P2;D=Num. of post-chars for stop char 2;T=BYTE;C=EDIT/SPIN/0/1/1/1;V=P2>15?"Maximum number of post-characters is 15":""
+I=S3;D=Start char 3 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=S3>255?"ASCII code cannot exceed 255":""
+I=U3;D=Use stop-char 3;T=BYTE;C=STATIC;O=0- No/0/1- Yes/1/
+I=E3;D=Stop-char 3 (ASCII code);T=BYTE;C=STATIC;M=CHARDLG;V=E3>255?"ASCII code cannot exceed 255":""
+I=P3;D=Num. of post-chars for stop char 3;T=BYTE;C=EDIT/SPIN/0/1/1/1;V=P3>15?"Maximum number of post-characters is 15":""
+

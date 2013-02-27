@@ -1,0 +1,39 @@
+I=$NET;D=Network Settings;T=GROUP
+I=ON;D=Owner name;T=STRING;C=EDIT;MAXLEN=8;F=R
+I=DN;D=Device name;T=STRING;C=EDIT;MAXLEN=8;F=R
+I=FE;D=MAC-address;T=STRING;C=ETHERNETCTRL;F=R
+I=DH;D=DHCP;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled/1;F=R
+I=IP;D=IP-address;T=STRING;C=IPCTRL;S=DH==1?"a":"e";F=R
+I=PN;D=Port;T=INT;C=EDIT;V=PN>65534||PN==32767?"Port number must be between 0 and 65534 (excluding 32767)":""
+I=TP;D=Transport protocol;T=INT;C=STATIC;O=0- UDP/0/1- TCP/1
+I=BU;E=1;D=Broadcast UDP data;T=INT;C=STATIC;O=0- Reject/0/1- Accept/1;S=TP==0?"e":"i"
+I=IB;E=1;D=Inband commands;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled/1;S=TP==1?"e":"i"
+I=DL;E=1;D=Data login;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled/1;S=TP==1?"e":"i"
+I=CT;D=Connection timeout (min);T=INT;C=EDIT/SPIN/0/1/1/10;O=0- Disabled/0;V=CT>255?"Maximum timeout is 255 minutes":""
+I=RM;D=Routing Mode;T=INT;C=STATIC;O=0- Server (Slave)/0/1- Server OR Client (Master)/1/2- Client only/2
+I=CM;E=1;D=Connection mode;T=INT;C=STATIC;O=0- Immediately (on powerup)/0/1- On data OR command/1/2- On command only/2/3- On command or DSR=HIGH/3;S=RM!=0?"e":"i"
+I=DI;E=1;D=Destination IP-address;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=DP;E=1;D=Destination port;T=INT;C=EDIT;S=RM!=0?"e":"i"
+I=GI;E=1;D=Gateway IP-address;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=NM;E=1;D=Subnet mask;T=STRING;C=IPCTRL;S=RM!=0?"e":"i"
+I=ND;E=1;D=Notification destination;T=INT;C=STATIC;O=0- Last port/0/1- Port 65535/1/;S=IB==0?"e":"i"
+I=$SER;D=Serial Settings;T=GROUP
+I=SI;D=Serial interface;T=INT;C=STATIC;O=0- Full-duplex/0/1- Half-duplex/1/2- Automatic/2
+I=FC;D=RTS/CTS flow control;T=INT;C=STATIC;O=0- Disabled or remote /0/1- Local/1
+I=DT;D=DTR mode;T=INT;C=STATIC;O=0- Idle or remote /0/1- Indicate connection status/1
+I=BR;D=Baud rate;T=INT;C=STATIC;O=8- 150 bps/8/9- 300 bps/9/10- 600 bps/10/0- 1200 bps/0/1- 2400 bps/1/2- 4800 bps/2/3- 9600 bps/3/4- 19200 bps/4/11- 28800 bps/11/5- 38400 bps/5/6- 57600 bps/6/7- 115200 bps/7
+I=PR;D=Parity;T=INT;C=STATIC;O=0- None/0/1- Even/1/2- Odd/2/3- Mark/3/4- Space/4
+I=BB;D=Data bits;T=INT;C=STATIC;O=0- 7 bits/0/1- 8 bits/1
+I=SE;D=Soft entry into Serial programming mode;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled (option1)/1/2- Enabled (option2)/2
+I=RC;D=On-the-Fly commands;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled/1
+I=OP;E=1;D=Password for on-the-Fly commands;T=INT;C=STATIC;O=0- Disabled/0/1- Enabled/1;S=RC==1?"e":"i"
+I=NB;D=Notification bitmask;T=INT;C=EDIT;M=NBITMASK;V=NB>255?"Bitmask must be in the range from 0 to 255":""
+I=$OBP;D=Outbound packets;T=GROUP
+I=ML;D=Max packet length;T=INT;C=EDIT/SPIN/0/10;V=ML>255?"Packet length must be between 1 and 255 bytes":""
+I=MD;D=Max intercharacter delay;T=INT;C=EDIT/SPIN/0/1/1/10;V=MD>255?"Maximum intercharacter delay is 255 (2550ms)":""
+I=SA;D=Start on any char;T=INT;C=STATIC;O=0- No/0/1- Yes/1
+I=F1;D=Use start-character;T=INT;C=STATIC;O=0- No/0/1- Yes/1
+I=S1;D=Start character (ASCII code);T=INT;C=STATIC;M=CHARDLG;V=S1>255?"ASCII code cannot exceed 255":""
+I=U1;D=Use stop-character;T=INT;C=STATIC;O=0- No/0/1- Yes/1/
+I=E1;D=Stop-character (ASCII code);T=INT;C=STATIC;M=CHARDLG;V=E1>255?"ASCII code cannot exceed 255":""
+I=P1;D=Number of post-characters;T=INT;C=EDIT/SPIN/0/1/1/1;V=P1>15?"Maximum number of post-characters is 15":""

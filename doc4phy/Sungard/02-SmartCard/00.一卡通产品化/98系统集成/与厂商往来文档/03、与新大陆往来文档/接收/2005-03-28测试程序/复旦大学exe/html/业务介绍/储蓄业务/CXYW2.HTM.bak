@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<LINK 
+href="../Content/HTML/fhgk.css" rel=stylesheet type=text/css>
+<SCRIPT language=javascript>
+var flag=1
+function chgcontent(){
+	if(flag==1){
+		wpage.src="../pic/lastpage.jpg"
+		ele.nextPage();
+		flag=0
+	}
+	else{
+		wpage.src="../pic/nextpage.jpg"
+		ele.previousPage()
+		flag=1
+	}
+}
+		 
+</SCRIPT>
+<style type="text/css">
+<!--
+.boldsm {  font-family: "宋体"; font-size: 14px; font-weight: bolder; color: #000000}
+-->
+</style>
+<meta name="Microsoft Theme" content="sumipntg 001, default">
+</head>
+<body style="line-height: 100%; margin-top: -6; margin-bottom: 0" background="../../PIC/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099">
+<!--mstheme--><font face="宋体">
+<p style="line-height: 100%">
+　<!--mstheme--></font>
+<table width="296" border="0" height="403" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top" align="center"> 
+    <td height="76" colspan="2" width="600"><!--mstheme--><font face="宋体"><img border="0" src="../../PIC/title.jpg" width="540" height="90"><!--mstheme--></font></td>
+  </tr>
+  <tr valign="top" align="center"> 
+    <td height="189" width="23"><!--mstheme--><font face="宋体"><span></span><!--mstheme--></font></td>
+    <td height="189" width="575"><!--mstheme--><font face="宋体">
+      <p align="left" style="line-height: 100%; margin-top: 3; margin-bottom: 3">零存整取<br>
+      <br>
+      指约定存期、每月固定存款、到期一次支取本息的一种储蓄。开户起存金额5元。储户可<br>
+      凭有效身份证件办理提前支取，但不可部分提前支取。计息按实存金额和实际存期计算<br>
+      ，具体利率标准请参照利率表。<br>
+      <br>
+      人民币通知存款</p>
+      <p align="left" style="line-height: 100%; margin-top: 3; margin-bottom: 3"><br>
+      指存款人在存入款项时不约定存款存期，支取时需提前通知（书面或传真方式）银行，<br>
+      约定支取日期和金额方能支取的一种储蓄方式。通知存款是介于定期存款与活期存款之<br>
+      间的一种存款，同时具有定期存款和活期存款的优点，其利率高于活期存款。最低起存</p>
+      <p align="left" style="line-height: 100%; margin-top: 3; margin-bottom: 3"><br>
+      金额为5万元，最低支取金额为5万元。<br>
+      <!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="宋体"><!--mstheme--></font></body>
+</html>

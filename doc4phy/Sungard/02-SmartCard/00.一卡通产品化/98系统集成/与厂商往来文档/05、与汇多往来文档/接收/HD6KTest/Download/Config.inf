@@ -1,0 +1,13 @@
+CCU ID=00012321
+Local IP=010.049.188.247
+Local Mask=255.255.000.000
+Local Gateway=010.049.000.001
+Local Port=05001
+Remote IP=010.049.188.111
+Remote Mask=255.255.000.000
+Remote Port=06001
+CAN Mask=001.127.255
+Work Mode=00
+Notify Interval=0020
+Idle MaxTime=00180
+ResponseTimeLimit=02000

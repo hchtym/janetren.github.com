@@ -1,0 +1,26 @@
+In order to use the HW Device Server Toolkit, you must read and agree to the following license agreement. Please indicate your agreement by pressing the YES button.
+
+HW TECHNOLOGY, INC.
+END USER LICENSE AGREEMENT
+HW Device Server Toolkit
+
+This License Agreement for the HW Device Server Toolkit ("License Agreement") is a legal agreement between you (either an individual or an entity) and HW Technology, Inc. ("HW") for HW Device Server Toolkit software ("Software"). You may install as many copies of the Software as necessary provided that these copies are used SOLELY in conjunction with HW's Serial-to-Network Devices (i.e. DS100 SERIAL DEVICE SERVER, EM100 ETHERNET MODULE, other similar Devices that may be released by HW in the future.). You MAY NOT use this software to enable communications with or through the Serial-to-Network Devices that are not manufactured by HW, or in any other manner that does not incur the use of HW's Serial-to-Network Devices. By clicking on the YES button, installing, copying or otherwise using the Software, you agree to be bound by the terms of this License Agreement. If you do not agree to the terms of this License Agreement, then do not install the Software.
+
+YOU AGREE THAT YOUR USE OF THE SOFTWARE ACKNOWLEDGES THAT YOU HAVE READ THIS LICENSE, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+1. GRANT OF LICENSE: HW hereby grants you a non-exclusive license to use the Software and any related documentation ("Documentation") subject to the following terms:
+
+You may: (i) use this Software on as many computers as necessary provided that this Software is used SOLELY to communicate with or through HW's Serial-to-Network Devices (DS100, EM100, etc.); (ii) copy the Software for back-up and archival purposes provided any copy must contain all of the original Software's proprietary notices. 
+
+2. LICENSE RESTRICTIONS: 
+
+a) You may not: (i) permit other individuals to use the Software except under the terms listed above; (ii) modify, translate, reverse engineer, decompile, disassemble or create derivative works based upon the Software or Documentation; (iii) resell, rent, lease, transfer, or otherwise transfer rights to the Software or Documentation; or (iv) remove any proprietary notices or labels on or in the Software or Documentation.
+
+b) You may not use the Software to communicate with or through Serial-to-Network Devices that are not manufactured by HW, or in any other manner that does not incur the use of HW's Serial-to-Network Devices
+
+3. TITLE: Title, ownership, rights, and intellectual property rights in and to the Software and Documentation shall remain in HW. The Software is protected by the international copyright treaties.
+
+4. DISCLAIMER OF WARRANTY: THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, HW FURTHER DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE AND DOCUMENTATION REMAINS WITH YOU. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL HW BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) ARISING OUT OF THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE PRODUCT, EVEN IF HW HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+4. TERMINATION: This License Agreement shall terminate automatically if you fail to comply with the limitations described in this license. No notice shall be required from HW to effectuate such termination. Upon termination, you must destroy all copies of the Software and Documentation.
+

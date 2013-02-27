@@ -1,0 +1,11 @@
+Module2 monitor program 3.00
+
+download objective file:
+	Monitor.bin
+	Monitor.nm
+download tool
+	updown-2.40_YND_cn.exe
+manual:
+	ÏÂÔØ¼à¿Ø³ÌÐò.doc
+readme file:
+	this file

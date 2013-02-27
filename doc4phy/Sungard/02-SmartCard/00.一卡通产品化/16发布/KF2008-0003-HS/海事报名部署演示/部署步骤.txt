@@ -1,0 +1,14 @@
+部署步骤：
+
+1.用数据库脚本.txt中的sql语句建立表空间、用户和表
+
+2.在oracle中导入bmBaseDataAll.dmp(里面是报名系统的基础数据)
+
+3.把baoming.war放到tomcat/webapps下,重启tomcat
+
+4.修改baoming.war/WEB-INF/conf/config.properties中的
+  hibernate.connection.username 
+  hibernate.connection.password 
+  hibernate.connection.url
+
+5.重启tomcat，用帐号admin,密码admin4kingstar登陆报名系统，成功即可。

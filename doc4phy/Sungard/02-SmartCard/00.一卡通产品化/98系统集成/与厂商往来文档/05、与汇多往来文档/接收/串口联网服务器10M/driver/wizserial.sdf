@@ -1,0 +1,19 @@
+I=$SER;D=Serial Settings;T=GROUP
+I=FC;D=RTS/CTS flow control;T=INT;C=STATIC;O=0- Disabled or remote /0/1- Local/1;X=0;S=NB&16?"f0":"e"
+I=BR;D=Baud rate;T=INT;C=STATIC;O=8- 150 bps/8/9- 300 bps/9/10- 600 bps/10/0- 1200 bps/0/1- 2400 bps/1/2- 4800 bps/2/3- 9600 bps/3/4- 19200 bps/4/11- 28800 bps/11/5- 38400 bps/5/6- 57600 bps/6/7- 115200 bps/7;X=5
+I=PR;D=Parity;T=INT;C=STATIC;O=0- None/0/1- Even/1/2- Odd/2/3- Mark/3/4- Space/4;X=0
+I=BB;D=Data bits;T=INT;C=STATIC;O=0- 7 bits/0/1- 8 bits/1;X=1
+I=$OTH;T=GROUP
+I=DH;T=INT
+I=IP;T=STRING
+I=GI;T=STRING
+I=NM;T=STRING
+I=PN;T=INT
+I=TP;T=INT
+I=DI;T=STRING
+I=DP;T=INT
+I=RM;T=INT
+I=CM;T=INT
+I=RC;T=INT
+I=IB;T=INT
+I=NB;T=INT

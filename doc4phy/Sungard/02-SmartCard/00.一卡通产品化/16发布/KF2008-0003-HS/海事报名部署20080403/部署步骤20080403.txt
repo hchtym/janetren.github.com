@@ -1,0 +1,26 @@
+1 停掉tomcat
+
+2 在表YKT_BM.BM_STU_BM中 添加字段 字段名 GRADES 类型 NUMBER(9,2)
+
+3 执行sql:
+      update YKT_BM.BM_STU_BM set grades=0;
+      INSERT INTO YKT_BM.ICO_MENU (ID, PID, MENU_NAME, URL, TITLE, TARGET, ICON, ICONOPEN, OPENED , SORT_FLAG) VALUES ('0309','03','考生成绩导入','stuuploadAction.do?method=load4uploadgrades','','main','','','','9');
+      INSERT INTO YKT_BM.ICO_MENU (ID, PID, MENU_NAME, URL, TITLE, TARGET, ICON, ICONOPEN, OPENED , SORT_FLAG) VALUES ('0310','03','历史数据清理','studentAction.do?method=search4historyList','','main','','','','10');
+      INSERT INTO YKT_BM.ICO_MENU (ID, PID, MENU_NAME, URL, TITLE, TARGET, ICON, ICONOPEN, OPENED , SORT_FLAG) VALUES ('06','0','报名缴费流程','about.do','','main','','','','0');
+      update YKT_BM.ICO_MENU set URL='javascript:window.parent.menu.doout();' where ID='9901';
+
+4 在tomcat的/opt下建立文件夹stuphoto，执行 mkdir stuphoto (如果要删除stuphoto下的照片，可用rm *.jpg)
+
+5 在tomcat/conf/server.xml中加入属性useBodyEncodingForURI="true"
+<Connector port="8009"               
+maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+               enableLookups="false" redirectPort="8443" acceptCount="100"
+               debug="0" connectionTimeout="20000" 
+               disableUploadTimeout="true" useBodyEncodingForURI="true"/>
+
+6 删除work/Catalina/localhost和webapps下的旧版本，拷贝新版本到webapps，重启tomcat
+
+7 修改config.properties，重启tomcat
+
+8 分配菜单(报名管理/考生成绩导入，报名管理/历史数据清理)给教务处
+  分配菜单(报名缴费流程)给考生

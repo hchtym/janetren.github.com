@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<LINK 
+href="../../../../../工作资料/新建文件夹/Content/HTML/fhgk.css" rel=stylesheet type=text/css>
+<SCRIPT language=javascript>
+var flag=1
+function chgcontent(){
+	if(flag==1){
+		wpage.src="../pic/lastpage.jpg"
+		ele.nextPage();
+		flag=0
+	}
+	else{
+		wpage.src="../pic/nextpage.jpg"
+		ele.previousPage()
+		flag=1
+	}
+}
+		 
+</SCRIPT>
+<style type="text/css">
+<!--
+.boldsm {  font-family: "宋体"; font-size: 14px; font-weight: bolder; color: #000000}
+-->
+</style>
+<meta name="Microsoft Theme" content="sumipntg 001, default">
+</head>
+<body bgcolor="#FFFFFF" background="../PIC/sumtextb.jpg" text="#000066" link="#3333CC" vlink="#666699" alink="#990099">
+<!--mstheme--><font face="宋体">
+<p style="text-indent: 19">
+<OBJECT ID="sss" WIDTH=0 HEIGHT=0 border="0"
+	CLASSID="CLSID:333c7bc4-460f-11d0-bc04-0080c7055a83" style="text-indent: 20">
+    <param name="RowDelim" value="
+">
+    <param name="FieldDelim" value="||">
+    <param name="TextQualifier" value>
+    <param name="EscapeChar" value>
+    <param name="UseHeader" value="-1">
+    <param name="SortAscending" value="-1">
+    <param name="SortColumn" value>
+    <param name="FilterValue" value>
+    <param name="FilterCriterion" value="??">
+    <param name="FilterColumn" value>
+    <param name="CharSet" value>
+    <param name="Language" value>
+    <param name="CaseSensitive" value="-1">
+    <param name="Sort" value>
+    <param name="Filter" value>
+    <param name="AppendData" value="0">
+    <param name="DataURL" value="introduce.ini">
+    <param name="ReadyState" value="4"><!--param name="FieldDelim" value="|"-->
+</OBJECT>
+<!--mstheme--></font>
+<table width="50%" border="0" height="336" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top" align="center"> 
+    <td height="76" colspan="2"><!--mstheme--><font face="宋体"><img src="../pic/TITLE.jpg" width="506" height="89"><!--mstheme--></font></td>
+  </tr>
+  <tr valign="top" align="center"> 
+    <td height="122" width="133"><!--mstheme--><font face="宋体"><span></span><!--mstheme--></font></td>
+    <td height="122">
+      <!--mstheme--><font face="宋体"><!--mstheme--></font>
+      <table id="ele" datapagesize=5 border="0" datasrc="#sss" height=200 width=540 >
+        <tbody> 
+        <tr>
+            <td><!--mstheme--><font face="宋体"><div id="didd" datafld="name" DATAFORMATAS=html></div><!--mstheme--></font></td>
+     		</tr>
+     	</tbody>
+   </table><!--mstheme--><font face="宋体"><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="宋体"><!--mstheme--></font>
+</body>
+</html>

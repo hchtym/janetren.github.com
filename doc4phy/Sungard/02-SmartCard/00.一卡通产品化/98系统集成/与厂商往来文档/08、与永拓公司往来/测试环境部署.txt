@@ -1,0 +1,10 @@
+1. 安装 DRTP 
+	解压 DRTP.zip
+	在 cmd 中运行 drtp -install
+	本服务的端口是 4000
+	
+2. 运行 testbu 服务
+	解压 testbu.zip
+	运行 ksmbcc.exe
+	应用服务的主功能号 8800
+	

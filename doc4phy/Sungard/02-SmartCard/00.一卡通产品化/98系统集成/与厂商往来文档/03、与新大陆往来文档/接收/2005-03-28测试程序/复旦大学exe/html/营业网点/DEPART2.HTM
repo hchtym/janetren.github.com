@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Microsoft Theme" content="sumipntg 001, default">
+</head>
+
+<script language="javascript">
+var flag=1
+function nextpage(){
+	if(flag*14<SSS.recordset.RecordCount){
+		ele.nextPage()
+		
+		preb.src="../pic/upbutton.jpg"
+		flag=flag+1
+	}
+	if(flag*14>=SSS.recordset.RecordCount){
+		nxtb.src="../pic/disbuttond.jpg"
+	}
+}
+function prepage(){
+	if(flag>1){
+		ele.previousPage()
+		
+		nxtb.src="../pic/downbutton.jpg"
+		flag=flag-1
+	}
+	if(flag==1){
+		preb.src="../pic/disbuttonu.jpg"
+	}
+}
+</script>
+
+<body background="../PIC/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099">
+<!--mstheme--><font face="宋体">
+<div id="Layer1" style="position:absolute; left:590px; top:547px; width:77px; height:26px; z-index:1">　</div>
+<div id="Layer2" style="position:absolute; left:730px; top:194px; width:58px; height:69px; z-index:2">　</div>
+<OBJECT ID="SSS" WIDTH=0 HEIGHT=0 border="0" CLASSID="CLSID:333c7bc4-460f-11d0-bc04-0080c7055a83">
+   <param name="RowDelim" value="
+">
+   <param name="FieldDelim" value="	">
+   <param name="TextQualifier" value="&quot;">
+   <param name="EscapeChar" value>
+   <param name="UseHeader" value="-1">
+   <param name="SortAscending" value="-1">
+   <param name="SortColumn" value>
+   <param name="FilterValue" value>
+   <param name="FilterCriterion" value="??">
+   <param name="FilterColumn" value>
+   <param name="CharSet" value>
+   <param name="Language" value>
+   <param name="CaseSensitive" value="-1">
+   <param name="Sort" value>
+   <param name="Filter" value>
+   <param name="AppendData" value="0">
+   <param name="DataURL" value="DEPART2.txt">
+   <param name="ReadyState" value="4">
+</OBJECT>
+<!--mstheme--></font>
+<table width="629" border="0" cellspacing="0" cellpadding="0" height="347">
+  <tr> 
+    <td height="329" width="37"><!--mstheme--><font face="宋体"><!--mstheme--></font></td>
+    <td height="329" width="588" align="left" valign="top"> 
+      <!--mstheme--><font face="宋体"> 
+      <div align="center"><br>
+        <font size="4"><b>中信实业银行武汉分行自助银行</b></font> <br>
+      </div>
+      <!--mstheme--></font>
+      <table id="ele"  border="1" datasrc="#sss" datapagesize=14 width=550 bordercolorlight="#C0C0C0" bordercolordark="#003366">
+        <thead> 
+        <tr> 
+          <td width=22% align="center"><!--mstheme--><font face="宋体"><b>名称　</b><!--mstheme--></font></td>
+          <td width=47% align="center"><!--mstheme--><font face="宋体"><b>地　　　址</b><!--mstheme--></font></td>
+          <td width=11% align="center"><!--mstheme--><font face="宋体"><b>电话</b> <!--mstheme--></font> </td>
+        </tr>
+        </thead> <tbody> 
+        <tr> 
+          <td width=22%> 
+            <!--mstheme--><font face="宋体"> 
+            <div datafld="name" style="font-size:14;font-family:宋体;"></div>
+            <!--mstheme--></font>
+          </td>
+          <td width=47%> 
+            <!--mstheme--><font face="宋体"> 
+            <div datafld="addr" style="font-size:14;font-family:宋体;"></div>
+            <!--mstheme--></font>
+          </td>
+          <td width=11%> 
+            <!--mstheme--><font face="宋体"> 
+            <div datafld="tel" style="font-size:14;font-family:宋体;"></div><!--mstheme--></font></td>
+        </tr>
+        </tbody> 
+      </table><!--mstheme--><font face="宋体"><!--mstheme--></font></td>
+  </tr>
+  <tr> 
+    <td colspan="2" height="38" width="627"><!--mstheme--><font face="宋体">&nbsp;<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="宋体"><!--mstheme--></font></body>
+</html>
