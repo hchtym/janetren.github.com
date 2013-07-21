@@ -1,0 +1,7 @@
+ip route replace default via 101.226.241.1 dev eth0
+  ip route flush table tel  
+  ip route add default via 101.226.241.1 dev eth0 src 101.226.241.136 table tel
+  ip rule add from 101.226.241.136 table tel
+  ip route flush table cnc
+  ip route add default via 118.242.45.1 dev eth1 src 118.242.45.246 table cnc
+  ip rule add from 118.242.45.246 table cnc
